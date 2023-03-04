@@ -1,0 +1,1233 @@
+text:0006D8A8 sub_6D8A8                               ; CODE XREF: sub_78894+2C8¡ýp
+.text:0006D8A8                                         ; sub_78894+2D2¡ýp ...
+.text:0006D8A8
+.text:0006D8A8 var_120         = -0x120
+.text:0006D8A8 var_11C         = -0x11C
+.text:0006D8A8 var_118         = -0x118
+.text:0006D8A8 var_114         = -0x114
+.text:0006D8A8 s2              = -0x10C
+.text:0006D8A8 var_108         = -0x108
+.text:0006D8A8 dest            = -0x104
+.text:0006D8A8 var_100         = -0x100
+.text:0006D8A8 s               = -0xFC
+.text:0006D8A8 var_F8          = -0xF8
+.text:0006D8A8 var_F4          = -0xF4
+.text:0006D8A8 var_EC          = -0xEC
+.text:0006D8A8 n               = -0xDC
+.text:0006D8A8 var_D8          = -0xD8
+.text:0006D8A8 var_D4          = -0xD4
+.text:0006D8A8 var_BC          = -0xBC
+.text:0006D8A8 var_A4          = -0xA4
+.text:0006D8A8 var_A0          = -0xA0
+.text:0006D8A8 var_9C          = -0x9C
+.text:0006D8A8 var_84          = -0x84
+.text:0006D8A8 var_78          = -0x78
+.text:0006D8A8 var_6F          = -0x6F
+.text:0006D8A8 var_6C          = -0x6C
+.text:0006D8A8 var_2C          = -0x2C
+.text:0006D8A8 var_28          = -0x28
+.text:0006D8A8
+.text:0006D8A8                 PUSH.W          {R4-R11,LR}
+.text:0006D8AC                 SUB             SP, SP, #0xFC
+.text:0006D8AE                 LDR.W           R5, =(_GLOBAL_OFFSET_TABLE_ - 0x6D8BE)
+.text:0006D8B2                 ADD             R3, SP, #0x120+var_6C
+.text:0006D8B4                 LDR.W           R7, =(__stack_chk_guard_ptr - 0x115B50)
+.text:0006D8B8                 MOV             R4, R2
+.text:0006D8BA                 ADD             R5, PC  ; _GLOBAL_OFFSET_TABLE_
+.text:0006D8BC                 STR             R3, [SP,#0x120+s]
+.text:0006D8BE                 LDR.W           R3, =(aGetwlan5gcypre - 0x6D8CC)
+.text:0006D8C2                 MOV             R10, R0
+.text:0006D8C4                 LDR             R2, [R5,R7] ; __stack_chk_guard
+.text:0006D8C6                 MOV             R6, R1
+.text:0006D8C8                 ADD             R3, PC  ; "getWlan5GCypressConfig"
+.text:0006D8CA                 STR             R3, [SP,#0x120+var_120]
+.text:0006D8CC                 LDR.W           R3, =(aWlan - 0x6D8DC)
+.text:0006D8D0                 MOVS            R1, #0x3F ; '?' ; maxlen
+.text:0006D8D2                 MOV             R7, R2
+.text:0006D8D4                 STR             R2, [SP,#0x120+var_F4]
+.text:0006D8D6                 LDR             R7, [R7]
+.text:0006D8D8                 ADD             R3, PC  ; "WLAN"
+.text:0006D8DA                 LDR.W           R2, =(aSS - 0x6D8E4)
+.text:0006D8DE                 LDR             R0, [SP,#0x120+s] ; s
+.text:0006D8E0                 ADD             R2, PC  ; "%s::%s"
+.text:0006D8E2                 STR             R7, [SP,#0x120+var_2C]
+.text:0006D8E4                 BLX             snprintf
+.text:0006D8E8                 LDR.W           R3, =(__tracing__channel_CON_CONMAN_WLAN_ptr - 0x115B50)
+.text:0006D8EC                 LDR             R3, [R5,R3] ; __tracing__channel_CON_CONMAN_WLAN
+.text:0006D8EE                 STR             R3, [SP,#0x120+var_100]
+.text:0006D8F0                 LDRSH.W         R3, [R3,#(word_119F64 - 0x119F24)]
+.text:0006D8F4                 CMP             R3, #1
+.text:0006D8F6                 BLE.W           loc_6DAFA
+.text:0006D8FA
+.text:0006D8FA loc_6D8FA                               ; CODE XREF: sub_6D8A8+274¡ýj
+.text:0006D8FA                 ADD             R3, SP, #0x120+var_BC
+.text:0006D8FC                 ADD             R2, SP, #0x120+var_EC
+.text:0006D8FE                 MOV             R1, R6
+.text:0006D900                 STR             R2, [SP,#0x120+var_108]
+.text:0006D902                 MOV             R6, R3
+.text:0006D904                 MOV             R0, R3
+.text:0006D906                 MOV             R7, R2
+.text:0006D908                 MOV             R2, R4
+.text:0006D90A                 STR             R3, [SP,#0x120+var_F8]
+.text:0006D90C                 ADD             R4, SP, #0x120+var_D4
+.text:0006D90E                 STR             R4, [SP,#0x120+dest]
+.text:0006D910                 BL              sub_6D6B8
+.text:0006D914                 MOV             R1, R6
+.text:0006D916                 MOV             R0, R7
+.text:0006D918                 BL              sub_3ED58
+.text:0006D91C                 LDR.W           R1, =(aSDChannelSNotF+0x20 - 0x6D926)
+.text:0006D920                 MOV             R0, R4  ; dest
+.text:0006D922                 ADD             R1, PC  ; "XT" ; s
+.text:0006D924                 BL              sub_340A0
+.text:0006D928                 LDR.W           R3, =(_ZGVZN11networking_10channelmap8getWordsEvE8wordlist_ptr - 0x115B50)
+.text:0006D92C                 LDR             R6, [R5,R3] ; _ZGVZN11networking_10channelmap8getWordsEvE8wordlist_ptr ...
+.text:0006D92E                 LDR             R3, [R6] ; `guard variable for'networking_::channelmap::getWords(void)::wordlist
+.text:0006D930                 LSLS            R3, R3, #0x1F
+.text:0006D932                 BPL.W           loc_6DAE8
+.text:0006D936                 LDR.W           R3, =(_ZZN11networking_10channelmap8getWordsEvE8wordlist_ptr - 0x115B50)
+.text:0006D93A                 LDR             R7, [R5,R3] ; _ZZN11networking_10channelmap8getWordsEvE8wordlist_ptr ...
+.text:0006D93C
+.text:0006D93C loc_6D93C                               ; CODE XREF: sub_6D8A8+250¡ýj
+.text:0006D93C                                         ; sub_6D8A8+E5C¡ýj
+.text:0006D93C                 LDR.W           R11, [SP,#0x120+n]
+.text:0006D940                 MOVS            R6, #0xD1
+.text:0006D942                 LDR             R2, [SP,#0x120+var_D8]
+.text:0006D944                 MOV             R8, R7
+.text:0006D946                 LDR             R3, [SP,#0x120+var_EC]
+.text:0006D948                 LDR             R1, [SP,#0x120+var_108]
+.text:0006D94A                 CMP             R2, #0xF
+.text:0006D94C                 IT LS
+.text:0006D94E                 MOVLS           R3, R1
+.text:0006D950                 STR             R3, [SP,#0x120+s2]
+.text:0006D952
+.text:0006D952 loc_6D952                               ; CODE XREF: sub_6D8A8+E6¡ýj
+.text:0006D952                                         ; sub_6D8A8+1DC¡ýj
+.text:0006D952                 ADD.W           R4, R6, R6,LSR#31
+.text:0006D956                 ASRS            R4, R4, #1
+.text:0006D958                 ADD.W           R3, R4, R4,LSL#1
+.text:0006D95C                 LSLS            R3, R3, #4
+.text:0006D95E                 ADD.W           R5, R8, R3
+.text:0006D962                 LDR             R2, [R5,#0x14]
+.text:0006D964                 LDR.W           R9, [R5,#0x10]
+.text:0006D968                 CMP             R2, #0xF
+.text:0006D96A                 ITE HI
+.text:0006D96C                 LDRHI.W         R0, [R8,R3]
+.text:0006D970                 MOVLS           R0, R5  ; s1
+.text:0006D972                 CMP             R9, R11
+.text:0006D974                 MOV             R2, R9
+.text:0006D976                 IT CS
+.text:0006D978                 MOVCS           R2, R11 ; n
+.text:0006D97A                 CMP             R2, #0
+.text:0006D97C                 BEQ             loc_6DA76
+.text:0006D97E                 LDR             R1, [SP,#0x120+s2] ; s2
+.text:0006D980                 BLX             memcmp
+.text:0006D984                 CMP             R0, #0
+.text:0006D986                 BEQ             loc_6DA76
+.text:0006D988
+.text:0006D988 loc_6D988                               ; CODE XREF: sub_6D8A8+23E¡ýj
+.text:0006D988                 CMP             R0, #0
+.text:0006D98A                 BLT             loc_6DA7A
+.text:0006D98C                 SUBS            R6, R4, #0
+.text:0006D98E                 BGT             loc_6D952
+.text:0006D990                 ADD.W           R3, R7, #0x2700
+.text:0006D994                 ADD             R4, SP, #0x120+var_9C
+.text:0006D996                 ADDS            R3, #0x30 ; '0'
+.text:0006D998                 CMP             R8, R3
+.text:0006D99A                 BEQ             loc_6DA94
+.text:0006D99C
+.text:0006D99C loc_6D99C                               ; CODE XREF: sub_6D8A8+1EA¡ýj
+.text:0006D99C                 LDR             R0, [SP,#0x120+var_108]
+.text:0006D99E                 MOV             R1, R8
+.text:0006D9A0                 BL              sub_3EA04
+.text:0006D9A4                 MOV             R5, R0
+.text:0006D9A6                 CMP             R0, #0
+.text:0006D9A8                 BNE             loc_6DA94
+.text:0006D9AA                 MOV             R1, R8
+.text:0006D9AC                 ADD.W           R8, R8, #0x18
+.text:0006D9B0                 MOV             R6, R0
+.text:0006D9B2                 MOV             R0, R4
+.text:0006D9B4                 BL              sub_3ED58
+.text:0006D9B8                 LDMIA.W         R8!, {R0-R3}
+.text:0006D9BC                 ADD             R7, SP, #0x120+var_84
+.text:0006D9BE                 STMIA           R7!, {R0-R3}
+.text:0006D9C0                 MOV.W           R3, #0xFFFFFFFF
+.text:0006D9C4                 LDMIA.W         R8, {R0,R1}
+.text:0006D9C8                 MOV             R2, R5
+.text:0006D9CA                 STR.W           R0, [R7],#4
+.text:0006D9CE                 LDR             R0, [SP,#0x120+dest] ; dest
+.text:0006D9D0                 STRH            R1, [R7]
+.text:0006D9D2                 LDR             R1, [SP,#0x120+var_108]
+.text:0006D9D4                 BL              sub_33D48
+.text:0006D9D8                 ADD             R3, SP, #0x120+var_78
+.text:0006D9DA                 ADD.W           R1, SP, #0x120+var_6F
+.text:0006D9DE
+.text:0006D9DE loc_6D9DE                               ; CODE XREF: sub_6D8A8+142¡ýj
+.text:0006D9DE                 LDRB.W          R2, [R3,#1]!
+.text:0006D9E2                 CMP             R2, #0
+.text:0006D9E4                 IT NE
+.text:0006D9E6                 MOVNE           R6, #1
+.text:0006D9E8                 CMP             R3, R1
+.text:0006D9EA                 BNE             loc_6D9DE
+.text:0006D9EC                 CMP             R6, #0
+.text:0006D9EE                 BNE.W           loc_6DB1E
+.text:0006D9F2
+.text:0006D9F2 loc_6D9F2                               ; CODE XREF: sub_6D8A8+20E¡ýj
+.text:0006D9F2                                         ; sub_6D8A8+2A6¡ýj ...
+.text:0006D9F2                 MOVS            R5, #0
+.text:0006D9F4                 MOV             R6, R5
+.text:0006D9F6
+.text:0006D9F6 loc_6D9F6                               ; CODE XREF: sub_6D8A8+236¡ýj
+.text:0006D9F6                                         ; sub_6D8A8+29A¡ýj
+.text:0006D9F6                 MOV             R0, R10
+.text:0006D9F8                 LDR             R1, [SP,#0x120+dest]
+.text:0006D9FA                 BL              sub_3ED58
+.text:0006D9FE                 LDR             R3, [SP,#0x120+var_100]
+.text:0006DA00                 LDRSH.W         R3, [R3,#0x40]
+.text:0006DA04                 STR.W           R5, [R10,#0x18]
+.text:0006DA08                 CMP             R3, #1
+.text:0006DA0A                 STRB.W          R6, [R10,#0x1C]
+.text:0006DA0E                 BGT             loc_6DA3A
+.text:0006DA10                 LDR.W           R3, [R10,#0x14]
+.text:0006DA14                 MOVW            R2, #0xEAD
+.text:0006DA18                 LDR             R0, [SP,#0x120+var_100] ; this
+.text:0006DA1A                 MOVS            R1, #1  ; __int16
+.text:0006DA1C                 CMP             R3, #0xF
+.text:0006DA1E                 ITE HI
+.text:0006DA20                 LDRHI.W         R3, [R10]
+.text:0006DA24                 MOVLS           R3, R10
+.text:0006DA26                 STR             R2, [SP,#0x120+var_120]
+.text:0006DA28                 LDR.W           R2, =(aSDWlan5gConfig - 0x6DA34)
+.text:0006DA2C                 STR             R3, [SP,#0x120+var_11C]
+.text:0006DA2E                 STR             R5, [SP,#0x120+var_118]
+.text:0006DA30                 ADD             R2, PC  ; "%s(%d): Wlan5G config: county:%s channe"...
+.text:0006DA32                 LDR             R3, [SP,#0x120+s]
+.text:0006DA34                 STR             R6, [SP,#0x120+var_114]
+.text:0006DA36                 BLX             _ZN7tracing7Channel5logCVEsPKcz ; tracing::Channel::logCV(short,char const*,...)
+.text:0006DA3A
+.text:0006DA3A loc_6DA3A                               ; CODE XREF: sub_6D8A8+166¡üj
+.text:0006DA3A                 MOV             R0, R4
+.text:0006DA3C                 MOVS            R1, #1
+.text:0006DA3E                 MOVS            R2, #0
+.text:0006DA40                 BL              sub_32C50
+.text:0006DA44                 LDR             R0, [SP,#0x120+dest]
+.text:0006DA46                 MOVS            R1, #1
+.text:0006DA48                 MOVS            R2, #0
+.text:0006DA4A                 BL              sub_32C50
+.text:0006DA4E                 LDR             R0, [SP,#0x120+var_108]
+.text:0006DA50                 MOVS            R1, #1
+.text:0006DA52                 MOVS            R2, #0
+.text:0006DA54                 BL              sub_32C50
+.text:0006DA58                 LDR             R0, [SP,#0x120+var_F8]
+.text:0006DA5A                 MOVS            R2, #0
+.text:0006DA5C                 MOVS            R1, #1
+.text:0006DA5E                 BL              sub_32C50
+.text:0006DA62                 LDR             R3, [SP,#0x120+var_F4]
+.text:0006DA64                 LDR             R2, [SP,#0x120+var_2C]
+.text:0006DA66                 MOV             R0, R10
+.text:0006DA68                 LDR             R3, [R3]
+.text:0006DA6A                 CMP             R2, R3
+.text:0006DA6C                 BNE.W           loc_6E708
+.text:0006DA70                 ADD             SP, SP, #0xFC
+.text:0006DA72                 POP.W           {R4-R11,PC}
+.text:0006DA76 ; ---------------------------------------------------------------------------
+.text:0006DA76
+.text:0006DA76 loc_6DA76                               ; CODE XREF: sub_6D8A8+D4¡üj
+.text:0006DA76                                         ; sub_6D8A8+DE¡üj
+.text:0006DA76                 CMP             R9, R11
+.text:0006DA78                 BCS             loc_6DAE0
+.text:0006DA7A
+.text:0006DA7A loc_6DA7A                               ; CODE XREF: sub_6D8A8+E2¡üj
+.text:0006DA7A                 MVNS            R4, R4
+.text:0006DA7C                 ADD             R6, R4
+.text:0006DA7E                 CMP             R6, #0
+.text:0006DA80                 ADD.W           R8, R5, #0x30
+.text:0006DA84                 BGT.W           loc_6D952
+.text:0006DA88                 ADD.W           R3, R7, #0x2700
+.text:0006DA8C                 ADD             R4, SP, #0x120+var_9C
+.text:0006DA8E                 ADDS            R3, #0x30 ; '0'
+.text:0006DA90                 CMP             R8, R3
+.text:0006DA92                 BNE             loc_6D99C
+.text:0006DA94
+.text:0006DA94 loc_6DA94                               ; CODE XREF: sub_6D8A8+F2¡üj
+.text:0006DA94                                         ; sub_6D8A8+100¡üj
+.text:0006DA94                 MOV             R1, R7
+.text:0006DA96                 MOV             R0, R4
+.text:0006DA98                 BL              sub_3ED58
+.text:0006DA9C                 LDR             R3, [SP,#0x120+var_100]
+.text:0006DA9E                 ADDS            R7, #0x18
+.text:0006DAA0                 ADD             R5, SP, #0x120+var_84
+.text:0006DAA2                 LDRSH.W         R6, [R3,#0x40]
+.text:0006DAA6                 LDMIA           R7!, {R0-R3}
+.text:0006DAA8                 CMP             R6, #3
+.text:0006DAAA                 STMIA           R5!, {R0-R3}
+.text:0006DAAC                 LDMIA.W         R7, {R0,R1}
+.text:0006DAB0                 STR.W           R0, [R5],#4
+.text:0006DAB4                 STRH            R1, [R5]
+.text:0006DAB6                 BGT             loc_6D9F2
+.text:0006DAB8                 LDR             R3, [SP,#0x120+var_D8]
+.text:0006DABA                 MOVS            R1, #3  ; __int16
+.text:0006DABC                 LDR.W           R2, =(aSDChannelSNotF - 0x6DACA)
+.text:0006DAC0                 MOVS            R5, #0
+.text:0006DAC2                 CMP             R3, #0xF
+.text:0006DAC4                 LDR             R0, [SP,#0x120+var_100] ; this
+.text:0006DAC6                 ADD             R2, PC  ; "%s(%d): Channel %s not found -> XT"
+.text:0006DAC8                 MOV             R6, R5
+.text:0006DACA                 ITE HI
+.text:0006DACC                 LDRHI           R3, [SP,#0x120+var_EC]
+.text:0006DACE                 LDRLS           R3, [SP,#0x120+var_108]
+.text:0006DAD0                 STR             R3, [SP,#0x120+var_11C]
+.text:0006DAD2                 MOVW            R3, #0xE87
+.text:0006DAD6                 STR             R3, [SP,#0x120+var_120]
+.text:0006DAD8                 LDR             R3, [SP,#0x120+s]
+.text:0006DADA                 BLX             _ZN7tracing7Channel5logCVEsPKcz ; tracing::Channel::logCV(short,char const*,...)
+.text:0006DADE                 B               loc_6D9F6
+.text:0006DAE0 ; ---------------------------------------------------------------------------
+.text:0006DAE0
+.text:0006DAE0 loc_6DAE0                               ; CODE XREF: sub_6D8A8+1D0¡üj
+.text:0006DAE0                 ITE NE
+.text:0006DAE2                 MOVNE           R0, #1
+.text:0006DAE4                 MOVEQ           R0, #0
+.text:0006DAE6                 B               loc_6D988
+.text:0006DAE8 ; ---------------------------------------------------------------------------
+.text:0006DAE8
+.text:0006DAE8 loc_6DAE8                               ; CODE XREF: sub_6D8A8+8A¡üj
+.text:0006DAE8                 MOV             R0, R6
+.text:0006DAEA                 BLX             __cxa_guard_acquire
+.text:0006DAEE                 LDR.W           R3, =(_ZZN11networking_10channelmap8getWordsEvE8wordlist_ptr - 0x115B50)
+.text:0006DAF2                 CMP             R0, #0
+.text:0006DAF4                 BNE             loc_6DB6A
+.text:0006DAF6                 LDR             R7, [R5,R3] ; _ZZN11networking_10channelmap8getWordsEvE8wordlist_ptr ...
+.text:0006DAF8                 B               loc_6D93C
+.text:0006DAFA ; ---------------------------------------------------------------------------
+.text:0006DAFA
+.text:0006DAFA loc_6DAFA                               ; CODE XREF: sub_6D8A8+4E¡üj
+.text:0006DAFA                 LDR             R3, [R6,#0x14]
+.text:0006DAFC                 MOVS            R1, #1  ; __int16
+.text:0006DAFE                 LDR.W           R2, =(aSDMccCountryS - 0x6DB0A)
+.text:0006DB02                 CMP             R3, #0xF
+.text:0006DB04                 LDR             R0, [SP,#0x120+var_100] ; this
+.text:0006DB06                 ADD             R2, PC  ; "%s(%d): mcc country=%s"
+.text:0006DB08                 ITE HI
+.text:0006DB0A                 LDRHI           R3, [R6]
+.text:0006DB0C                 MOVLS           R3, R6
+.text:0006DB0E                 STR             R3, [SP,#0x120+var_11C]
+.text:0006DB10                 MOVW            R3, #0xE79
+.text:0006DB14                 STR             R3, [SP,#0x120+var_120]
+.text:0006DB16                 LDR             R3, [SP,#0x120+s]
+.text:0006DB18                 BLX             _ZN7tracing7Channel5logCVEsPKcz ; tracing::Channel::logCV(short,char const*,...)
+.text:0006DB1C                 B               loc_6D8FA
+.text:0006DB1E ; ---------------------------------------------------------------------------
+.text:0006DB1E
+.text:0006DB1E loc_6DB1E                               ; CODE XREF: sub_6D8A8+146¡üj
+.text:0006DB1E                 LDR             R5, [SP,#0x120+var_A4]
+.text:0006DB20                 SUBS            R3, R5, #1
+.text:0006DB22                 CMP             R3, #0xA4
+.text:0006DB24                 IT HI
+.text:0006DB26                 MOVHI           R3, #0x16
+.text:0006DB28                 BHI             loc_6DB32
+.text:0006DB2A                 LDR.W           R2, =(unk_1012B8 - 0x6DB32)
+.text:0006DB2E                 ADD             R2, PC  ; unk_1012B8
+.text:0006DB30                 LDRB            R3, [R2,R3]
+.text:0006DB32
+.text:0006DB32 loc_6DB32                               ; CODE XREF: sub_6D8A8+280¡üj
+.text:0006DB32                 ADD             R2, SP, #0x120+var_28
+.text:0006DB34                 ADD             R3, R2
+.text:0006DB36                 LDRB.W          R3, [R3,#-0x5C]
+.text:0006DB3A                 CBZ             R3, loc_6DB46
+.text:0006DB3C                 LDRB.W          R3, [SP,#0x120+var_A0]
+.text:0006DB40                 CMP             R3, #0
+.text:0006DB42                 BNE.W           loc_6D9F6
+.text:0006DB46
+.text:0006DB46 loc_6DB46                               ; CODE XREF: sub_6D8A8+292¡üj
+.text:0006DB46                 LDR             R3, [SP,#0x120+var_100]
+.text:0006DB48                 LDRSH.W         R3, [R3,#0x40]
+.text:0006DB4C                 CMP             R3, #4
+.text:0006DB4E                 BGT.W           loc_6D9F2
+.text:0006DB52                 LDR.W           R2, =(aSD5ghzAllowedB - 0x6DB64)
+.text:0006DB56                 MOVW            R3, #0xEA3
+.text:0006DB5A                 LDR             R0, [SP,#0x120+var_100] ; this
+.text:0006DB5C                 MOVS            R1, #4  ; __int16
+.text:0006DB5E                 STR             R3, [SP,#0x120+var_120]
+.text:0006DB60                 ADD             R2, PC  ; "%s(%d): 5GHz allowed but no channels fo"...
+.text:0006DB62                 LDR             R3, [SP,#0x120+s]
+.text:0006DB64                 BLX             _ZN7tracing7Channel5logCVEsPKcz ; tracing::Channel::logCV(short,char const*,...)
+.text:0006DB68                 B               loc_6D9F2
+.text:0006DB6A ; ---------------------------------------------------------------------------
+.text:0006DB6A
+.text:0006DB6A loc_6DB6A                               ; CODE XREF: sub_6D8A8+24C¡üj
+.text:0006DB6A                 LDR             R7, [R5,R3] ; _ZZN11networking_10channelmap8getWordsEvE8wordlist_ptr ...
+.text:0006DB6C                 LDR.W           R1, =(aAd - 0x6DB78)
+.text:0006DB70                 ADD.W           R4, R7, #0x18C0
+.text:0006DB74                 ADD             R1, PC  ; "AD"
+.text:0006DB76                 MOV             R0, R7  ; dest
+.text:0006DB78                 BL              sub_340A0
+.text:0006DB7C                 LDR.W           R1, =(aAe - 0x6DB88)
+.text:0006DB80                 ADD.W           R0, R7, #0x30 ; dest
+.text:0006DB84                 ADD             R1, PC  ; "AE"
+.text:0006DB86                 BL              sub_340A0
+.text:0006DB8A                 LDR.W           R1, =(aAf - 0x6DB96)
+.text:0006DB8E                 ADD.W           R0, R7, #0x60 ; dest
+.text:0006DB92                 ADD             R1, PC  ; "AF"
+.text:0006DB94                 BL              sub_340A0
+.text:0006DB98                 LDR.W           R1, =(aAg - 0x6DBA4)
+.text:0006DB9C                 ADD.W           R0, R7, #0x90 ; dest
+.text:0006DBA0                 ADD             R1, PC  ; "AG"
+.text:0006DBA2                 BL              sub_340A0
+.text:0006DBA6                 LDR.W           R1, =(aClientconnecte_19+0x34 - 0x6DBB2)
+.text:0006DBAA                 ADD.W           R0, R7, #0xC0 ; dest
+.text:0006DBAE                 ADD             R1, PC  ; "AL" ; s
+.text:0006DBB0                 BL              sub_340A0
+.text:0006DBB4                 LDR.W           R1, =(aAm - 0x6DBC0)
+.text:0006DBB8                 ADD.W           R0, R7, #0xF0 ; dest
+.text:0006DBBC                 ADD             R1, PC  ; "AM"
+.text:0006DBBE                 BL              sub_340A0
+.text:0006DBC2                 LDR.W           R1, =(aAo - 0x6DBCE)
+.text:0006DBC6                 ADD.W           R0, R7, #0x120 ; dest
+.text:0006DBCA                 ADD             R1, PC  ; "AO"
+.text:0006DBCC                 BL              sub_340A0
+.text:0006DBD0                 LDR.W           R1, =(aAr - 0x6DBDC)
+.text:0006DBD4                 ADD.W           R0, R7, #0x150 ; dest
+.text:0006DBD8                 ADD             R1, PC  ; "AR"
+.text:0006DBDA                 BL              sub_340A0
+.text:0006DBDE                 LDR.W           R1, =(aAt - 0x6DBEA)
+.text:0006DBE2                 ADD.W           R0, R7, #0x180 ; dest
+.text:0006DBE6                 ADD             R1, PC  ; "AT"
+.text:0006DBE8                 BL              sub_340A0
+.text:0006DBEC                 LDR.W           R1, =(aAu - 0x6DBF8)
+.text:0006DBF0                 ADD.W           R0, R7, #0x1B0 ; dest
+.text:0006DBF4                 ADD             R1, PC  ; "AU"
+.text:0006DBF6                 BL              sub_340A0
+.text:0006DBFA                 LDR.W           R1, =(aAw - 0x6DC06)
+.text:0006DBFE                 ADD.W           R0, R7, #0x1E0 ; dest
+.text:0006DC02                 ADD             R1, PC  ; "AW"
+.text:0006DC04                 BL              sub_340A0
+.text:0006DC08                 LDR.W           R1, =(aAz - 0x6DC14)
+.text:0006DC0C                 ADD.W           R0, R7, #0x210 ; dest
+.text:0006DC10                 ADD             R1, PC  ; "AZ"
+.text:0006DC12                 BL              sub_340A0
+.text:0006DC16                 LDR.W           R1, =(aBa - 0x6DC22)
+.text:0006DC1A                 ADD.W           R0, R7, #0x240 ; dest
+.text:0006DC1E                 ADD             R1, PC  ; "BA"
+.text:0006DC20                 BL              sub_340A0
+.text:0006DC24                 LDR.W           R1, =(aBb - 0x6DC30)
+.text:0006DC28                 ADD.W           R0, R7, #0x270 ; dest
+.text:0006DC2C                 ADD             R1, PC  ; "BB"
+.text:0006DC2E                 BL              sub_340A0
+.text:0006DC32                 LDR.W           R1, =(aBd - 0x6DC3E)
+.text:0006DC36                 ADD.W           R0, R7, #0x2A0 ; dest
+.text:0006DC3A                 ADD             R1, PC  ; "BD"
+.text:0006DC3C                 BL              sub_340A0
+.text:0006DC40                 LDR.W           R1, =(aBe - 0x6DC4C)
+.text:0006DC44                 ADD.W           R0, R7, #0x2D0 ; dest
+.text:0006DC48                 ADD             R1, PC  ; "BE"
+.text:0006DC4A                 BL              sub_340A0
+.text:0006DC4E                 LDR.W           R1, =(aBf - 0x6DC5A)
+.text:0006DC52                 ADD.W           R0, R7, #0x300 ; dest
+.text:0006DC56                 ADD             R1, PC  ; "BF"
+.text:0006DC58                 BL              sub_340A0
+.text:0006DC5C                 LDR.W           R1, =(aBg - 0x6DC68)
+.text:0006DC60                 ADD.W           R0, R7, #0x330 ; dest
+.text:0006DC64                 ADD             R1, PC  ; "BG"
+.text:0006DC66                 BL              sub_340A0
+.text:0006DC6A                 LDR.W           R1, =(aBh - 0x6DC76)
+.text:0006DC6E                 ADD.W           R0, R7, #0x360 ; dest
+.text:0006DC72                 ADD             R1, PC  ; "BH"
+.text:0006DC74                 BL              sub_340A0
+.text:0006DC78                 LDR.W           R1, =(aBi - 0x6DC84)
+.text:0006DC7C                 ADD.W           R0, R7, #0x390 ; dest
+.text:0006DC80                 ADD             R1, PC  ; "BI"
+.text:0006DC82                 BL              sub_340A0
+.text:0006DC86                 LDR.W           R1, =(aBj - 0x6DC92)
+.text:0006DC8A                 ADD.W           R0, R7, #0x3C0 ; dest
+.text:0006DC8E                 ADD             R1, PC  ; "BJ"
+.text:0006DC90                 BL              sub_340A0
+.text:0006DC94                 LDR.W           R1, =(aBm - 0x6DCA0)
+.text:0006DC98                 ADD.W           R0, R7, #0x3F0 ; dest
+.text:0006DC9C                 ADD             R1, PC  ; "BM"
+.text:0006DC9E                 BL              sub_340A0
+.text:0006DCA2                 LDR.W           R1, =(aBn - 0x6DCAE)
+.text:0006DCA6                 ADD.W           R0, R7, #0x420 ; dest
+.text:0006DCAA                 ADD             R1, PC  ; "BN"
+.text:0006DCAC                 BL              sub_340A0
+.text:0006DCB0                 LDR.W           R1, =(aBo - 0x6DCBC)
+.text:0006DCB4                 ADD.W           R0, R7, #0x450 ; dest
+.text:0006DCB8                 ADD             R1, PC  ; "BO"
+.text:0006DCBA                 BL              sub_340A0
+.text:0006DCBE                 LDR.W           R1, =(aBq - 0x6DCCA)
+.text:0006DCC2                 ADD.W           R0, R7, #0x480 ; dest
+.text:0006DCC6                 ADD             R1, PC  ; "BQ"
+.text:0006DCC8                 BL              sub_340A0
+.text:0006DCCC                 LDR.W           R1, =(aBr - 0x6DCD8)
+.text:0006DCD0                 ADD.W           R0, R7, #0x4B0 ; dest
+.text:0006DCD4                 ADD             R1, PC  ; "BR"
+.text:0006DCD6                 BL              sub_340A0
+.text:0006DCDA                 LDR.W           R1, =(aBs - 0x6DCE6)
+.text:0006DCDE                 ADD.W           R0, R7, #0x4E0 ; dest
+.text:0006DCE2                 ADD             R1, PC  ; "BS"
+.text:0006DCE4                 BL              sub_340A0
+.text:0006DCE8                 LDR.W           R1, =(aBt - 0x6DCF4)
+.text:0006DCEC                 ADD.W           R0, R7, #0x510 ; dest
+.text:0006DCF0                 ADD             R1, PC  ; "BT"
+.text:0006DCF2                 BL              sub_340A0
+.text:0006DCF6                 LDR.W           R1, =(aBw - 0x6DD02)
+.text:0006DCFA                 ADD.W           R0, R7, #0x540 ; dest
+.text:0006DCFE                 ADD             R1, PC  ; "BW"
+.text:0006DD00                 BL              sub_340A0
+.text:0006DD04                 LDR.W           R1, =(aBy - 0x6DD10)
+.text:0006DD08                 ADD.W           R0, R7, #0x570 ; dest
+.text:0006DD0C                 ADD             R1, PC  ; "BY"
+.text:0006DD0E                 BL              sub_340A0
+.text:0006DD12                 LDR.W           R1, =(aBz - 0x6DD1E)
+.text:0006DD16                 ADD.W           R0, R7, #0x5A0 ; dest
+.text:0006DD1A                 ADD             R1, PC  ; "BZ"
+.text:0006DD1C                 BL              sub_340A0
+.text:0006DD20                 LDR.W           R1, =(aCa - 0x6DD2C)
+.text:0006DD24                 ADD.W           R0, R7, #0x5D0 ; dest
+.text:0006DD28                 ADD             R1, PC  ; "CA"
+.text:0006DD2A                 BL              sub_340A0
+.text:0006DD2E                 LDR.W           R1, =(aCd - 0x6DD3A)
+.text:0006DD32                 ADD.W           R0, R7, #0x600 ; dest
+.text:0006DD36                 ADD             R1, PC  ; "CD"
+.text:0006DD38                 BL              sub_340A0
+.text:0006DD3C                 LDR.W           R1, =(aCf - 0x6DD48)
+.text:0006DD40                 ADD.W           R0, R7, #0x630 ; dest
+.text:0006DD44                 ADD             R1, PC  ; "CF"
+.text:0006DD46                 BL              sub_340A0
+.text:0006DD4A                 LDR.W           R1, =(aCg - 0x6DD56)
+.text:0006DD4E                 ADD.W           R0, R7, #0x660 ; dest
+.text:0006DD52                 ADD             R1, PC  ; "CG"
+.text:0006DD54                 BL              sub_340A0
+.text:0006DD58                 LDR.W           R1, =(aDetach+4 - 0x6DD64)
+.text:0006DD5C                 ADD.W           R0, R7, #0x690 ; dest
+.text:0006DD60                 ADD             R1, PC  ; "CH" ; s
+.text:0006DD62                 BL              sub_340A0
+.text:0006DD66                 LDR.W           R1, =(aCi - 0x6DD72)
+.text:0006DD6A                 ADD.W           R0, R7, #0x6C0 ; dest
+.text:0006DD6E                 ADD             R1, PC  ; "CI"
+.text:0006DD70                 BL              sub_340A0
+.text:0006DD74                 LDR.W           R1, =(aCl - 0x6DD80)
+.text:0006DD78                 ADD.W           R0, R7, #0x6F0 ; dest
+.text:0006DD7C                 ADD             R1, PC  ; "CL"
+.text:0006DD7E                 BL              sub_340A0
+.text:0006DD82                 LDR.W           R1, =(aCm - 0x6DD8E)
+.text:0006DD86                 ADD.W           R0, R7, #0x720 ; dest
+.text:0006DD8A                 ADD             R1, PC  ; "CM"
+.text:0006DD8C                 BL              sub_340A0
+.text:0006DD90                 LDR.W           R1, =(aCn - 0x6DD9C)
+.text:0006DD94                 ADD.W           R0, R7, #0x750 ; dest
+.text:0006DD98                 ADD             R1, PC  ; "CN"
+.text:0006DD9A                 BL              sub_340A0
+.text:0006DD9E                 LDR.W           R1, =(aCo - 0x6DDAA)
+.text:0006DDA2                 ADD.W           R0, R7, #0x780 ; dest
+.text:0006DDA6                 ADD             R1, PC  ; "CO"
+.text:0006DDA8                 BL              sub_340A0
+.text:0006DDAC                 LDR.W           R1, =(aCr - 0x6DDB8)
+.text:0006DDB0                 ADD.W           R0, R7, #0x7B0 ; dest
+.text:0006DDB4                 ADD             R1, PC  ; "CR"
+.text:0006DDB6                 BL              sub_340A0
+.text:0006DDBA                 LDR.W           R1, =(aCv - 0x6DDC6)
+.text:0006DDBE                 ADD.W           R0, R7, #0x7E0 ; dest
+.text:0006DDC2                 ADD             R1, PC  ; "CV"
+.text:0006DDC4                 BL              sub_340A0
+.text:0006DDC8                 LDR.W           R1, =(aCw - 0x6DDD4)
+.text:0006DDCC                 ADD.W           R0, R7, #0x810 ; dest
+.text:0006DDD0                 ADD             R1, PC  ; "CW"
+.text:0006DDD2                 BL              sub_340A0
+.text:0006DDD6                 LDR.W           R1, =(aCy - 0x6DDE2)
+.text:0006DDDA                 ADD.W           R0, R7, #0x840 ; dest
+.text:0006DDDE                 ADD             R1, PC  ; "CY"
+.text:0006DDE0                 BL              sub_340A0
+.text:0006DDE4                 LDR.W           R1, =(aCz - 0x6DDF0)
+.text:0006DDE8                 ADD.W           R0, R7, #0x870 ; dest
+.text:0006DDEC                 ADD             R1, PC  ; "CZ"
+.text:0006DDEE                 BL              sub_340A0
+.text:0006DDF2                 LDR.W           R1, =(aDe - 0x6DDFE)
+.text:0006DDF6                 ADD.W           R0, R7, #0x8A0 ; dest
+.text:0006DDFA                 ADD             R1, PC  ; "DE"
+.text:0006DDFC                 BL              sub_340A0
+.text:0006DE00                 LDR.W           R1, =(aDj - 0x6DE0C)
+.text:0006DE04                 ADD.W           R0, R7, #0x8D0 ; dest
+.text:0006DE08                 ADD             R1, PC  ; "DJ"
+.text:0006DE0A                 BL              sub_340A0
+.text:0006DE0E                 LDR.W           R1, =(aDk - 0x6DE1A)
+.text:0006DE12                 ADD.W           R0, R7, #0x900 ; dest
+.text:0006DE16                 ADD             R1, PC  ; "DK"
+.text:0006DE18                 BL              sub_340A0
+.text:0006DE1C                 LDR.W           R1, =(aDo - 0x6DE28)
+.text:0006DE20                 ADD.W           R0, R7, #0x930 ; dest
+.text:0006DE24                 ADD             R1, PC  ; "DO"
+.text:0006DE26                 BL              sub_340A0
+.text:0006DE2A                 LDR.W           R1, =(aDz - 0x6DE36)
+.text:0006DE2E                 ADD.W           R0, R7, #0x960 ; dest
+.text:0006DE32                 ADD             R1, PC  ; "DZ"
+.text:0006DE34                 BL              sub_340A0
+.text:0006DE38                 LDR.W           R1, =(aEc - 0x6DE44)
+.text:0006DE3C                 ADD.W           R0, R7, #0x990 ; dest
+.text:0006DE40                 ADD             R1, PC  ; "EC"
+.text:0006DE42                 BL              sub_340A0
+.text:0006DE46                 LDR.W           R1, =(aEe - 0x6DE52)
+.text:0006DE4A                 ADD.W           R0, R7, #0x9C0 ; dest
+.text:0006DE4E                 ADD             R1, PC  ; "EE"
+.text:0006DE50                 BL              sub_340A0
+.text:0006DE54                 LDR.W           R1, =(aEg - 0x6DE60)
+.text:0006DE58                 ADD.W           R0, R7, #0x9F0 ; dest
+.text:0006DE5C                 ADD             R1, PC  ; "EG"
+.text:0006DE5E                 BL              sub_340A0
+.text:0006DE62                 LDR.W           R1, =(aEh - 0x6DE6E)
+.text:0006DE66                 ADD.W           R0, R7, #0xA20 ; dest
+.text:0006DE6A                 ADD             R1, PC  ; "EH"
+.text:0006DE6C                 BL              sub_340A0
+.text:0006DE70                 LDR.W           R1, =(aNoCarrier+8 - 0x6DE7C)
+.text:0006DE74                 ADD.W           R0, R7, #0xA50 ; dest
+.text:0006DE78                 ADD             R1, PC  ; "ER" ; s
+.text:0006DE7A                 BL              sub_340A0
+.text:0006DE7E                 LDR.W           R1, =(aInterfaces+8 - 0x6DE8A)
+.text:0006DE82                 ADD.W           R0, R7, #0xA80 ; dest
+.text:0006DE86                 ADD             R1, PC  ; "ES" ; s
+.text:0006DE88                 BL              sub_340A0
+.text:0006DE8C                 LDR.W           R1, =(aEt - 0x6DE98)
+.text:0006DE90                 ADD.W           R0, R7, #0xAB0 ; dest
+.text:0006DE94                 ADD             R1, PC  ; "ET"
+.text:0006DE96                 BL              sub_340A0
+.text:0006DE9A                 LDR.W           R1, =(aFi - 0x6DEA6)
+.text:0006DE9E                 ADD.W           R0, R7, #0xAE0 ; dest
+.text:0006DEA2                 ADD             R1, PC  ; "FI"
+.text:0006DEA4                 BL              sub_340A0
+.text:0006DEA8                 LDR.W           R1, =(aFj - 0x6DEB4)
+.text:0006DEAC                 ADD.W           R0, R7, #0xB10 ; dest
+.text:0006DEB0                 ADD             R1, PC  ; "FJ"
+.text:0006DEB2                 BL              sub_340A0
+.text:0006DEB6                 LDR.W           R1, =(aConConmanDhcpn+0x10 - 0x6DEC2)
+.text:0006DEBA                 ADD.W           R0, R7, #0xB40 ; dest
+.text:0006DEBE                 ADD             R1, PC  ; "FO" ; s
+.text:0006DEC0                 BL              sub_340A0
+.text:0006DEC4                 LDR.W           R1, =(aFr - 0x6DED0)
+.text:0006DEC8                 ADD.W           R0, R7, #0xB70 ; dest
+.text:0006DECC                 ADD             R1, PC  ; "FR"
+.text:0006DECE                 BL              sub_340A0
+.text:0006DED2                 LDR.W           R1, =(aGa - 0x6DEDE)
+.text:0006DED6                 ADD.W           R0, R7, #0xBA0 ; dest
+.text:0006DEDA                 ADD             R1, PC  ; "GA"
+.text:0006DEDC                 BL              sub_340A0
+.text:0006DEE0                 LDR.W           R1, =(aGb - 0x6DEEC)
+.text:0006DEE4                 ADD.W           R0, R7, #0xBD0 ; dest
+.text:0006DEE8                 ADD             R1, PC  ; "GB"
+.text:0006DEEA                 BL              sub_340A0
+.text:0006DEEE                 LDR.W           R1, =(aGd - 0x6DEFA)
+.text:0006DEF2                 ADD.W           R0, R7, #0xC00 ; dest
+.text:0006DEF6                 ADD             R1, PC  ; "GD"
+.text:0006DEF8                 BL              sub_340A0
+.text:0006DEFC                 LDR.W           R1, =(aGe - 0x6DF08)
+.text:0006DF00                 ADD.W           R0, R7, #0xC30 ; dest
+.text:0006DF04                 ADD             R1, PC  ; "GE"
+.text:0006DF06                 BL              sub_340A0
+.text:0006DF0A                 LDR.W           R1, =(aGf - 0x6DF16)
+.text:0006DF0E                 ADD.W           R0, R7, #0xC60 ; dest
+.text:0006DF12                 ADD             R1, PC  ; "GF"
+.text:0006DF14                 BL              sub_340A0
+.text:0006DF18                 LDR.W           R1, =(aGh - 0x6DF24)
+.text:0006DF1C                 ADD.W           R0, R7, #0xC90 ; dest
+.text:0006DF20                 ADD             R1, PC  ; "GH"
+.text:0006DF22                 BL              sub_340A0
+.text:0006DF26                 LDR.W           R1, =(aGi - 0x6DF32)
+.text:0006DF2A                 ADD.W           R0, R7, #0xCC0 ; dest
+.text:0006DF2E                 ADD             R1, PC  ; "GI"
+.text:0006DF30                 BL              sub_340A0
+.text:0006DF34                 LDR.W           R1, =(aGm - 0x6DF40)
+.text:0006DF38                 ADD.W           R0, R7, #0xCF0 ; dest
+.text:0006DF3C                 ADD             R1, PC  ; "GM"
+.text:0006DF3E                 BL              sub_340A0
+.text:0006DF42                 LDR.W           R1, =(aGn - 0x6DF4E)
+.text:0006DF46                 ADD.W           R0, R7, #0xD20 ; dest
+.text:0006DF4A                 ADD             R1, PC  ; "GN"
+.text:0006DF4C                 BL              sub_340A0
+.text:0006DF50                 LDR.W           R1, =(aGp - 0x6DF5C)
+.text:0006DF54                 ADD.W           R0, R7, #0xD50 ; dest
+.text:0006DF58                 ADD             R1, PC  ; "GP"
+.text:0006DF5A                 BL              sub_340A0
+.text:0006DF5E                 LDR.W           R1, =(aGq - 0x6DF6A)
+.text:0006DF62                 ADD.W           R0, R7, #0xD80 ; dest
+.text:0006DF66                 ADD             R1, PC  ; "GQ"
+.text:0006DF68                 BL              sub_340A0
+.text:0006DF6C                 LDR.W           R1, =(aGr - 0x6DF78)
+.text:0006DF70                 ADD.W           R0, R7, #0xDB0 ; dest
+.text:0006DF74                 ADD             R1, PC  ; "GR"
+.text:0006DF76                 BL              sub_340A0
+.text:0006DF7A                 LDR.W           R1, =(aGt - 0x6DF86)
+.text:0006DF7E                 ADD.W           R0, R7, #0xDE0 ; dest
+.text:0006DF82                 ADD             R1, PC  ; "GT"
+.text:0006DF84                 BL              sub_340A0
+.text:0006DF88                 LDR.W           R1, =(aGu - 0x6DF94)
+.text:0006DF8C                 ADD.W           R0, R7, #0xE10 ; dest
+.text:0006DF90                 ADD             R1, PC  ; "GU"
+.text:0006DF92                 BL              sub_340A0
+.text:0006DF96                 LDR.W           R1, =(aGw - 0x6DFA2)
+.text:0006DF9A                 ADD.W           R0, R7, #0xE40 ; dest
+.text:0006DF9E                 ADD             R1, PC  ; "GW"
+.text:0006DFA0                 BL              sub_340A0
+.text:0006DFA4                 LDR.W           R1, =(aGy - 0x6DFB0)
+.text:0006DFA8                 ADD.W           R0, R7, #0xE70 ; dest
+.text:0006DFAC                 ADD             R1, PC  ; "GY"
+.text:0006DFAE                 BL              sub_340A0
+.text:0006DFB2                 LDR.W           R1, =(aHk - 0x6DFBE)
+.text:0006DFB6                 ADD.W           R0, R7, #0xEA0 ; dest
+.text:0006DFBA                 ADD             R1, PC  ; "HK"
+.text:0006DFBC                 BL              sub_340A0
+.text:0006DFC0                 LDR.W           R1, =(aHn - 0x6DFCC)
+.text:0006DFC4                 ADD.W           R0, R7, #0xED0 ; dest
+.text:0006DFC8                 ADD             R1, PC  ; "HN"
+.text:0006DFCA                 BL              sub_340A0
+.text:0006DFCE                 LDR.W           R1, =(aHr - 0x6DFDA)
+.text:0006DFD2                 ADD.W           R0, R7, #0xF00 ; dest
+.text:0006DFD6                 ADD             R1, PC  ; "HR"
+.text:0006DFD8                 BL              sub_340A0
+.text:0006DFDC                 LDR.W           R1, =(aHt - 0x6DFE8)
+.text:0006DFE0                 ADD.W           R0, R7, #0xF30 ; dest
+.text:0006DFE4                 ADD             R1, PC  ; "HT"
+.text:0006DFE6                 BL              sub_340A0
+.text:0006DFEA                 LDR.W           R1, =(aHu - 0x6DFF6)
+.text:0006DFEE                 ADD.W           R0, R7, #0xF60 ; dest
+.text:0006DFF2                 ADD             R1, PC  ; "HU"
+.text:0006DFF4                 BL              sub_340A0
+.text:0006DFF8                 LDR.W           R1, =(aSDStartupTimeo+0x28 - 0x6E004)
+.text:0006DFFC                 ADD.W           R0, R7, #0xF90 ; dest
+.text:0006E000                 ADD             R1, PC  ; "ID" ; s
+.text:0006E002                 BL              sub_340A0
+.text:0006E006                 LDR.W           R1, =(aIe - 0x6E012)
+.text:0006E00A                 ADD.W           R0, R7, #0xFC0 ; dest
+.text:0006E00E                 ADD             R1, PC  ; "IE"
+.text:0006E010                 BL              sub_340A0
+.text:0006E014                 LDR.W           R1, =(aIl - 0x6E020)
+.text:0006E018                 ADD.W           R0, R7, #0xFF0 ; dest
+.text:0006E01C                 ADD             R1, PC  ; "IL"
+.text:0006E01E                 BL              sub_340A0
+.text:0006E022                 LDR.W           R1, =(aTsesim+4 - 0x6E02E)
+.text:0006E026                 ADD.W           R0, R7, #0x1020 ; dest
+.text:0006E02A                 ADD             R1, PC  ; "IM" ; s
+.text:0006E02C                 BL              sub_340A0
+.text:0006E030                 LDR.W           R1, =(aIn - 0x6E03C)
+.text:0006E034                 ADD.W           R0, R7, #0x1040
+.text:0006E038                 ADD             R1, PC  ; "IN"
+.text:0006E03A                 ADDS            R0, #0x10 ; dest
+.text:0006E03C                 BL              sub_340A0
+.text:0006E040                 LDR.W           R1, =(aIq - 0x6E04C)
+.text:0006E044                 ADD.W           R0, R7, #0x1080 ; dest
+.text:0006E048                 ADD             R1, PC  ; "IQ"
+.text:0006E04A                 BL              sub_340A0
+.text:0006E04E                 LDR.W           R1, =(aIs - 0x6E05A)
+.text:0006E052                 ADD.W           R0, R7, #0x10A0
+.text:0006E056                 ADD             R1, PC  ; "IS"
+.text:0006E058                 ADDS            R0, #0x10 ; dest
+.text:0006E05A                 BL              sub_340A0
+.text:0006E05E                 LDR.W           R1, =(aIt - 0x6E06A)
+.text:0006E062                 ADD.W           R0, R7, #0x10E0 ; dest
+.text:0006E066                 ADD             R1, PC  ; "IT"
+.text:0006E068                 BL              sub_340A0
+.text:0006E06C                 LDR.W           R1, =(aJe - 0x6E078)
+.text:0006E070                 ADD.W           R0, R7, #0x1100
+.text:0006E074                 ADD             R1, PC  ; "JE"
+.text:0006E076                 ADDS            R0, #0x10 ; dest
+.text:0006E078                 BL              sub_340A0
+.text:0006E07C                 LDR.W           R1, =(aJm - 0x6E088)
+.text:0006E080                 ADD.W           R0, R7, #0x1140 ; dest
+.text:0006E084                 ADD             R1, PC  ; "JM"
+.text:0006E086                 BL              sub_340A0
+.text:0006E08A                 LDR.W           R1, =(aJo - 0x6E096)
+.text:0006E08E                 ADD.W           R0, R7, #0x1160
+.text:0006E092                 ADD             R1, PC  ; "JO"
+.text:0006E094                 ADDS            R0, #0x10 ; dest
+.text:0006E096                 BL              sub_340A0
+.text:0006E09A                 LDR.W           R1, =(aJp - 0x6E0A6)
+.text:0006E09E                 ADD.W           R0, R7, #0x11A0 ; dest
+.text:0006E0A2                 ADD             R1, PC  ; "JP"
+.text:0006E0A4                 BL              sub_340A0
+.text:0006E0A8                 LDR.W           R1, =(aKe - 0x6E0B4)
+.text:0006E0AC                 ADD.W           R0, R7, #0x11C0
+.text:0006E0B0                 ADD             R1, PC  ; "KE"
+.text:0006E0B2                 ADDS            R0, #0x10 ; dest
+.text:0006E0B4                 BL              sub_340A0
+.text:0006E0B8                 LDR.W           R1, =(aKg - 0x6E0C4)
+.text:0006E0BC                 ADD.W           R0, R7, #0x1200 ; dest
+.text:0006E0C0                 ADD             R1, PC  ; "KG"
+.text:0006E0C2                 BL              sub_340A0
+.text:0006E0C6                 LDR.W           R1, =(aKh - 0x6E0D2)
+.text:0006E0CA                 ADD.W           R0, R7, #0x1220
+.text:0006E0CE                 ADD             R1, PC  ; "KH"
+.text:0006E0D0                 ADDS            R0, #0x10 ; dest
+.text:0006E0D2                 BL              sub_340A0
+.text:0006E0D6                 LDR.W           R1, =(aKm - 0x6E0E2)
+.text:0006E0DA                 ADD.W           R0, R7, #0x1260 ; dest
+.text:0006E0DE                 ADD             R1, PC  ; "KM"
+.text:0006E0E0                 BL              sub_340A0
+.text:0006E0E4                 LDR.W           R1, =(aKn - 0x6E0F0)
+.text:0006E0E8                 ADD.W           R0, R7, #0x1280
+.text:0006E0EC                 ADD             R1, PC  ; "KN"
+.text:0006E0EE                 ADDS            R0, #0x10 ; dest
+.text:0006E0F0                 BL              sub_340A0
+.text:0006E0F4                 LDR.W           R1, =(aKr - 0x6E100)
+.text:0006E0F8                 ADD.W           R0, R7, #0x12C0 ; dest
+.text:0006E0FC                 ADD             R1, PC  ; "KR"
+.text:0006E0FE                 BL              sub_340A0
+.text:0006E102                 LDR.W           R1, =(aKw - 0x6E10E)
+.text:0006E106                 ADD.W           R0, R7, #0x12E0
+.text:0006E10A                 ADD             R1, PC  ; "KW"
+.text:0006E10C                 ADDS            R0, #0x10 ; dest
+.text:0006E10E                 BL              sub_340A0
+.text:0006E112                 LDR.W           R1, =(aKy - 0x6E11E)
+.text:0006E116                 ADD.W           R0, R7, #0x1320 ; dest
+.text:0006E11A                 ADD             R1, PC  ; "KY"
+.text:0006E11C                 BL              sub_340A0
+.text:0006E120                 LDR.W           R1, =(aKz - 0x6E12C)
+.text:0006E124                 ADD.W           R0, R7, #0x1340
+.text:0006E128                 ADD             R1, PC  ; "KZ"
+.text:0006E12A                 ADDS            R0, #0x10 ; dest
+.text:0006E12C                 BL              sub_340A0
+.text:0006E130                 LDR.W           R1, =(aLa - 0x6E13C)
+.text:0006E134                 ADD.W           R0, R7, #0x1380 ; dest
+.text:0006E138                 ADD             R1, PC  ; "LA"
+.text:0006E13A                 BL              sub_340A0
+.text:0006E13E                 LDR.W           R1, =(aLb - 0x6E14A)
+.text:0006E142                 ADD.W           R0, R7, #0x13A0
+.text:0006E146                 ADD             R1, PC  ; "LB"
+.text:0006E148                 ADDS            R0, #0x10 ; dest
+.text:0006E14A                 BL              sub_340A0
+.text:0006E14E                 LDR.W           R1, =(aLc - 0x6E15A)
+.text:0006E152                 ADD.W           R0, R7, #0x13E0 ; dest
+.text:0006E156                 ADD             R1, PC  ; "LC"
+.text:0006E158                 BL              sub_340A0
+.text:0006E15C                 LDR.W           R1, =(aConConmanCli+0xC - 0x6E168)
+.text:0006E160                 ADD.W           R0, R7, #0x1400
+.text:0006E164                 ADD             R1, PC  ; "LI" ; s
+.text:0006E166                 ADDS            R0, #0x10 ; dest
+.text:0006E168                 BL              sub_340A0
+.text:0006E16C                 LDR.W           R1, =(aLk - 0x6E178)
+.text:0006E170                 ADD.W           R0, R7, #0x1440 ; dest
+.text:0006E174                 ADD             R1, PC  ; "LK"
+.text:0006E176                 BL              sub_340A0
+.text:0006E17A                 LDR.W           R1, =(aLr - 0x6E186)
+.text:0006E17E                 ADD.W           R0, R7, #0x1460
+.text:0006E182                 ADD             R1, PC  ; "LR"
+.text:0006E184                 ADDS            R0, #0x10 ; dest
+.text:0006E186                 BL              sub_340A0
+.text:0006E18A                 LDR.W           R1, =(aLs - 0x6E196)
+.text:0006E18E                 ADD.W           R0, R7, #0x14A0 ; dest
+.text:0006E192                 ADD             R1, PC  ; "LS"
+.text:0006E194                 BL              sub_340A0
+.text:0006E198                 LDR.W           R1, =(aLt - 0x6E1A4)
+.text:0006E19C                 ADD.W           R0, R7, #0x14C0
+.text:0006E1A0                 ADD             R1, PC  ; "LT"
+.text:0006E1A2                 ADDS            R0, #0x10 ; dest
+.text:0006E1A4                 BL              sub_340A0
+.text:0006E1A8                 LDR.W           R1, =(aLu - 0x6E1B4)
+.text:0006E1AC                 ADD.W           R0, R7, #0x1500 ; dest
+.text:0006E1B0                 ADD             R1, PC  ; "LU"
+.text:0006E1B2                 BL              sub_340A0
+.text:0006E1B6                 LDR.W           R1, =(aLv - 0x6E1C2)
+.text:0006E1BA                 ADD.W           R0, R7, #0x1520
+.text:0006E1BE                 ADD             R1, PC  ; "LV"
+.text:0006E1C0                 ADDS            R0, #0x10 ; dest
+.text:0006E1C2                 BL              sub_340A0
+.text:0006E1C6                 LDR.W           R1, =(aLy - 0x6E1D2)
+.text:0006E1CA                 ADD.W           R0, R7, #0x1560 ; dest
+.text:0006E1CE                 ADD             R1, PC  ; "LY"
+.text:0006E1D0                 BL              sub_340A0
+.text:0006E1D4                 LDR.W           R1, =(aMa - 0x6E1E0)
+.text:0006E1D8                 ADD.W           R0, R7, #0x1580
+.text:0006E1DC                 ADD             R1, PC  ; "MA"
+.text:0006E1DE                 ADDS            R0, #0x10 ; dest
+.text:0006E1E0                 BL              sub_340A0
+.text:0006E1E4                 LDR.W           R1, =(aMc - 0x6E1F0)
+.text:0006E1E8                 ADD.W           R0, R7, #0x15C0 ; dest
+.text:0006E1EC                 ADD             R1, PC  ; "MC"
+.text:0006E1EE                 BL              sub_340A0
+.text:0006E1F2                 LDR.W           R1, =(aMd - 0x6E1FE)
+.text:0006E1F6                 ADD.W           R0, R7, #0x15E0
+.text:0006E1FA                 ADD             R1, PC  ; "MD"
+.text:0006E1FC                 ADDS            R0, #0x10 ; dest
+.text:0006E1FE                 BL              sub_340A0
+.text:0006E202                 LDR.W           R1, =(aMe - 0x6E20E)
+.text:0006E206                 ADD.W           R0, R7, #0x1620 ; dest
+.text:0006E20A                 ADD             R1, PC  ; "ME"
+.text:0006E20C                 BL              sub_340A0
+.text:0006E210                 LDR.W           R1, =(aMf - 0x6E21C)
+.text:0006E214                 ADD.W           R0, R7, #0x1640
+.text:0006E218                 ADD             R1, PC  ; "MF"
+.text:0006E21A                 ADDS            R0, #0x10 ; dest
+.text:0006E21C                 BL              sub_340A0
+.text:0006E220                 LDR.W           R1, =(aMg - 0x6E22C)
+.text:0006E224                 ADD.W           R0, R7, #0x1680 ; dest
+.text:0006E228                 ADD             R1, PC  ; "MG"
+.text:0006E22A                 BL              sub_340A0
+.text:0006E22E                 LDR.W           R1, =(aMk - 0x6E23A)
+.text:0006E232                 ADD.W           R0, R7, #0x16A0
+.text:0006E236                 ADD             R1, PC  ; "MK"
+.text:0006E238                 ADDS            R0, #0x10 ; dest
+.text:0006E23A                 BL              sub_340A0
+.text:0006E23E                 LDR.W           R1, =(aMl - 0x6E24A)
+.text:0006E242                 ADD.W           R0, R7, #0x16E0 ; dest
+.text:0006E246                 ADD             R1, PC  ; "ML"
+.text:0006E248                 BL              sub_340A0
+.text:0006E24C                 LDR.W           R1, =(aMm - 0x6E258)
+.text:0006E250                 ADD.W           R0, R7, #0x1700
+.text:0006E254                 ADD             R1, PC  ; "MM"
+.text:0006E256                 ADDS            R0, #0x10 ; dest
+.text:0006E258                 BL              sub_340A0
+.text:0006E25C                 LDR.W           R1, =(aMn - 0x6E268)
+.text:0006E260                 ADD.W           R0, R7, #0x1740 ; dest
+.text:0006E264                 ADD             R1, PC  ; "MN"
+.text:0006E266                 BL              sub_340A0
+.text:0006E26A                 LDR.W           R1, =(aMo - 0x6E276)
+.text:0006E26E                 ADD.W           R0, R7, #0x1760
+.text:0006E272                 ADD             R1, PC  ; "MO"
+.text:0006E274                 ADDS            R0, #0x10 ; dest
+.text:0006E276                 BL              sub_340A0
+.text:0006E27A                 LDR.W           R1, =(aMq - 0x6E286)
+.text:0006E27E                 ADD.W           R0, R7, #0x17A0 ; dest
+.text:0006E282                 ADD             R1, PC  ; "MQ"
+.text:0006E284                 BL              sub_340A0
+.text:0006E288                 LDR.W           R1, =(aMr - 0x6E294)
+.text:0006E28C                 ADD.W           R0, R7, #0x17C0
+.text:0006E290                 ADD             R1, PC  ; "MR"
+.text:0006E292                 ADDS            R0, #0x10 ; dest
+.text:0006E294                 BL              sub_340A0
+.text:0006E298                 LDR.W           R1, =(aMt - 0x6E2A4)
+.text:0006E29C                 ADD.W           R0, R7, #0x1800 ; dest
+.text:0006E2A0                 ADD             R1, PC  ; "MT"
+.text:0006E2A2                 BL              sub_340A0
+.text:0006E2A6                 LDR.W           R1, =(aMu - 0x6E2B2)
+.text:0006E2AA                 ADD.W           R0, R7, #0x1820
+.text:0006E2AE                 ADD             R1, PC  ; "MU"
+.text:0006E2B0                 ADDS            R0, #0x10 ; dest
+.text:0006E2B2                 BL              sub_340A0
+.text:0006E2B6                 LDR.W           R1, =(aMv - 0x6E2C2)
+.text:0006E2BA                 ADD.W           R0, R7, #0x1860 ; dest
+.text:0006E2BE                 ADD             R1, PC  ; "MV"
+.text:0006E2C0                 BL              sub_340A0
+.text:0006E2C4                 LDR.W           R1, =(aMw - 0x6E2D0)
+.text:0006E2C8                 ADD.W           R0, R7, #0x1880
+.text:0006E2CC                 ADD             R1, PC  ; "MW"
+.text:0006E2CE                 ADDS            R0, #0x10 ; dest
+.text:0006E2D0                 BL              sub_340A0
+.text:0006E2D4                 LDR.W           R1, =(aMx - 0x6E2DE)
+.text:0006E2D8                 MOV             R0, R4  ; dest
+.text:0006E2DA                 ADD             R1, PC  ; "MX"
+.text:0006E2DC                 BL              sub_340A0
+.text:0006E2E0                 LDR.W           R1, =(aMy - 0x6E2EC)
+.text:0006E2E4                 ADD.W           R0, R4, #0x30 ; dest
+.text:0006E2E8                 ADD             R1, PC  ; "MY"
+.text:0006E2EA                 BL              sub_340A0
+.text:0006E2EE                 LDR.W           R1, =(aMz - 0x6E2FA)
+.text:0006E2F2                 ADD.W           R0, R7, #0x1920 ; dest
+.text:0006E2F6                 ADD             R1, PC  ; "MZ"
+.text:0006E2F8                 BL              sub_340A0
+.text:0006E2FC                 LDR.W           R1, =(aNa - 0x6E308)
+.text:0006E300                 ADD.W           R0, R4, #0x90 ; dest
+.text:0006E304                 ADD             R1, PC  ; "NA"
+.text:0006E306                 BL              sub_340A0
+.text:0006E30A                 LDR.W           R1, =(aNc - 0x6E316)
+.text:0006E30E                 ADD.W           R0, R7, #0x1980 ; dest
+.text:0006E312                 ADD             R1, PC  ; "NC"
+.text:0006E314                 BL              sub_340A0
+.text:0006E318                 LDR.W           R1, =(aNe - 0x6E324)
+.text:0006E31C                 ADD.W           R0, R4, #0xF0 ; dest
+.text:0006E320                 ADD             R1, PC  ; "NE"
+.text:0006E322                 BL              sub_340A0
+.text:0006E326                 LDR.W           R1, =(aConnecting+8 - 0x6E332)
+.text:0006E32A                 ADD.W           R0, R7, #0x19E0 ; dest
+.text:0006E32E                 ADD             R1, PC  ; "NG" ; s
+.text:0006E330                 BL              sub_340A0
+.text:0006E334                 LDR.W           R1, =(aNi - 0x6E340)
+.text:0006E338                 ADD.W           R0, R4, #0x150 ; dest
+.text:0006E33C                 ADD             R1, PC  ; "NI"
+.text:0006E33E                 BL              sub_340A0
+.text:0006E342                 LDR.W           R1, =(aNl - 0x6E34E)
+.text:0006E346                 ADD.W           R0, R7, #0x1A40 ; dest
+.text:0006E34A                 ADD             R1, PC  ; "NL"
+.text:0006E34C                 BL              sub_340A0
+.text:0006E350                 LDR.W           R1, =(aNo - 0x6E35C)
+.text:0006E354                 ADD.W           R0, R4, #0x1B0 ; dest
+.text:0006E358                 ADD             R1, PC  ; "NO"
+.text:0006E35A                 BL              sub_340A0
+.text:0006E35E                 LDR.W           R1, =(aNp - 0x6E36A)
+.text:0006E362                 ADD.W           R0, R7, #0x1AA0 ; dest
+.text:0006E366                 ADD             R1, PC  ; "NP"
+.text:0006E368                 BL              sub_340A0
+.text:0006E36C                 LDR.W           R1, =(aNz - 0x6E378)
+.text:0006E370                 ADD.W           R0, R4, #0x210 ; dest
+.text:0006E374                 ADD             R1, PC  ; "NZ"
+.text:0006E376                 BL              sub_340A0
+.text:0006E37A                 LDR.W           R1, =(aOm - 0x6E386)
+.text:0006E37E                 ADD.W           R0, R7, #0x1B00 ; dest
+.text:0006E382                 ADD             R1, PC  ; "OM"
+.text:0006E384                 BL              sub_340A0
+.text:0006E388                 LDR.W           R1, =(aConConmanWpa+0xC - 0x6E394)
+.text:0006E38C                 ADD.W           R0, R4, #0x270 ; dest
+.text:0006E390                 ADD             R1, PC  ; "PA" ; s
+.text:0006E392                 BL              sub_340A0
+.text:0006E396                 LDR.W           R1, =(aPe - 0x6E3A2)
+.text:0006E39A                 ADD.W           R0, R7, #0x1B60 ; dest
+.text:0006E39E                 ADD             R1, PC  ; "PE"
+.text:0006E3A0                 BL              sub_340A0
+.text:0006E3A4                 LDR.W           R1, =(aPf - 0x6E3B0)
+.text:0006E3A8                 ADD.W           R0, R4, #0x2D0 ; dest
+.text:0006E3AC                 ADD             R1, PC  ; "PF"
+.text:0006E3AE                 BL              sub_340A0
+.text:0006E3B2                 LDR.W           R1, =(aPg - 0x6E3BE)
+.text:0006E3B6                 ADD.W           R0, R7, #0x1BC0 ; dest
+.text:0006E3BA                 ADD             R1, PC  ; "PG"
+.text:0006E3BC                 BL              sub_340A0
+.text:0006E3C0                 LDR.W           R1, =(aPh - 0x6E3CC)
+.text:0006E3C4                 ADD.W           R0, R4, #0x330 ; dest
+.text:0006E3C8                 ADD             R1, PC  ; "PH"
+.text:0006E3CA                 BL              sub_340A0
+.text:0006E3CE                 LDR.W           R1, =(aPk - 0x6E3DA)
+.text:0006E3D2                 ADD.W           R0, R7, #0x1C20 ; dest
+.text:0006E3D6                 ADD             R1, PC  ; "PK"
+.text:0006E3D8                 BL              sub_340A0
+.text:0006E3DC                 LDR.W           R1, =(aPl - 0x6E3E8)
+.text:0006E3E0                 ADD.W           R0, R4, #0x390 ; dest
+.text:0006E3E4                 ADD             R1, PC  ; "PL"
+.text:0006E3E6                 BL              sub_340A0
+.text:0006E3EA                 LDR.W           R1, =(aPr - 0x6E3F6)
+.text:0006E3EE                 ADD.W           R0, R7, #0x1C80 ; dest
+.text:0006E3F2                 ADD             R1, PC  ; "PR"
+.text:0006E3F4                 BL              sub_340A0
+.text:0006E3F8                 LDR.W           R1, =(aPs - 0x6E404)
+.text:0006E3FC                 ADD.W           R0, R4, #0x3F0 ; dest
+.text:0006E400                 ADD             R1, PC  ; "PS"
+.text:0006E402                 BL              sub_340A0
+.text:0006E406                 LDR.W           R1, =(aPt - 0x6E412)
+.text:0006E40A                 ADD.W           R0, R7, #0x1CE0 ; dest
+.text:0006E40E                 ADD             R1, PC  ; "PT"
+.text:0006E410                 BL              sub_340A0
+.text:0006E414                 LDR.W           R1, =(aPy - 0x6E420)
+.text:0006E418                 ADD.W           R0, R4, #0x450 ; dest
+.text:0006E41C                 ADD             R1, PC  ; "PY"
+.text:0006E41E                 BL              sub_340A0
+.text:0006E422                 LDR.W           R1, =(aQa - 0x6E42E)
+.text:0006E426                 ADD.W           R0, R7, #0x1D40 ; dest
+.text:0006E42A                 ADD             R1, PC  ; "QA"
+.text:0006E42C                 BL              sub_340A0
+.text:0006E430                 LDR.W           R1, =(aRe - 0x6E43C)
+.text:0006E434                 ADD.W           R0, R4, #0x4B0 ; dest
+.text:0006E438                 ADD             R1, PC  ; "RE"
+.text:0006E43A                 BL              sub_340A0
+.text:0006E43E                 LDR.W           R1, =(aRo - 0x6E44A)
+.text:0006E442                 ADD.W           R0, R7, #0x1DA0 ; dest
+.text:0006E446                 ADD             R1, PC  ; "RO"
+.text:0006E448                 BL              sub_340A0
+.text:0006E44C                 LDR.W           R1, =(aTimers+4 - 0x6E458)
+.text:0006E450                 ADD.W           R0, R4, #0x510 ; dest
+.text:0006E454                 ADD             R1, PC  ; "RS" ; s
+.text:0006E456                 BL              sub_340A0
+.text:0006E45A                 LDR.W           R1, =(aRu - 0x6E466)
+.text:0006E45E                 ADD.W           R0, R7, #0x1E00 ; dest
+.text:0006E462                 ADD             R1, PC  ; "RU"
+.text:0006E464                 BL              sub_340A0
+.text:0006E468                 LDR.W           R1, =(aRw - 0x6E474)
+.text:0006E46C                 ADD.W           R0, R4, #0x570 ; dest
+.text:0006E470                 ADD             R1, PC  ; "RW"
+.text:0006E472                 BL              sub_340A0
+.text:0006E476                 LDR.W           R1, =(aSa - 0x6E482)
+.text:0006E47A                 ADD.W           R0, R7, #0x1E60 ; dest
+.text:0006E47E                 ADD             R1, PC  ; "SA"
+.text:0006E480                 BL              sub_340A0
+.text:0006E484                 LDR.W           R1, =(aSc - 0x6E490)
+.text:0006E488                 ADD.W           R0, R4, #0x5D0 ; dest
+.text:0006E48C                 ADD             R1, PC  ; "SC"
+.text:0006E48E                 BL              sub_340A0
+.text:0006E492                 LDR.W           R1, =(aRequestrse+8 - 0x6E49E)
+.text:0006E496                 ADD.W           R0, R7, #0x1EC0 ; dest
+.text:0006E49A                 ADD             R1, PC  ; "SE" ; s
+.text:0006E49C                 BL              sub_340A0
+.text:0006E4A0                 LDR.W           R1, =(aSg - 0x6E4AC)
+.text:0006E4A4                 ADD.W           R0, R4, #0x630 ; dest
+.text:0006E4A8                 ADD             R1, PC  ; "SG"
+.text:0006E4AA                 BL              sub_340A0
+.text:0006E4AE                 LDR.W           R1, =(aSi - 0x6E4BA)
+.text:0006E4B2                 ADD.W           R0, R7, #0x1F20 ; dest
+.text:0006E4B6                 ADD             R1, PC  ; "SI"
+.text:0006E4B8                 BL              sub_340A0
+.text:0006E4BC                 LDR.W           R1, =(aSk - 0x6E4C8)
+.text:0006E4C0                 ADD.W           R0, R4, #0x690 ; dest
+.text:0006E4C4                 ADD             R1, PC  ; "SK"
+.text:0006E4C6                 BL              sub_340A0
+.text:0006E4CA                 LDR.W           R1, =(aSl - 0x6E4D6)
+.text:0006E4CE                 ADD.W           R0, R7, #0x1F80 ; dest
+.text:0006E4D2                 ADD             R1, PC  ; "SL"
+.text:0006E4D4                 BL              sub_340A0
+.text:0006E4D8                 LDR.W           R1, =(aSm - 0x6E4E4)
+.text:0006E4DC                 ADD.W           R0, R4, #0x6F0 ; dest
+.text:0006E4E0                 ADD             R1, PC  ; "SM"
+.text:0006E4E2                 BL              sub_340A0
+.text:0006E4E6                 LDR.W           R1, =(aSn - 0x6E4F2)
+.text:0006E4EA                 ADD.W           R0, R7, #0x1FE0 ; dest
+.text:0006E4EE                 ADD             R1, PC  ; "SN"
+.text:0006E4F0                 BL              sub_340A0
+.text:0006E4F4                 LDR.W           R1, =(aSo - 0x6E500)
+.text:0006E4F8                 ADD.W           R0, R4, #0x750 ; dest
+.text:0006E4FC                 ADD             R1, PC  ; "SO"
+.text:0006E4FE                 BL              sub_340A0
+.text:0006E502                 LDR.W           R1, =(aSr - 0x6E50E)
+.text:0006E506                 ADD.W           R0, R7, #0x2040 ; dest
+.text:0006E50A                 ADD             R1, PC  ; "SR"
+.text:0006E50C                 BL              sub_340A0
+.text:0006E510                 LDR.W           R1, =(aSt - 0x6E51C)
+.text:0006E514                 ADD.W           R0, R4, #0x7B0 ; dest
+.text:0006E518                 ADD             R1, PC  ; "ST"
+.text:0006E51A                 BL              sub_340A0
+.text:0006E51E                 LDR.W           R1, =(aSv - 0x6E52A)
+.text:0006E522                 ADD.W           R0, R4, #0x7E0 ; dest
+.text:0006E526                 ADD             R1, PC  ; "SV"
+.text:0006E528                 BL              sub_340A0
+.text:0006E52C                 LDR.W           R1, =(aSz - 0x6E538)
+.text:0006E530                 ADD.W           R0, R4, #0x810 ; dest
+.text:0006E534                 ADD             R1, PC  ; "SZ"
+.text:0006E536                 BL              sub_340A0
+.text:0006E53A                 LDR.W           R1, =(aTd - 0x6E546)
+.text:0006E53E                 ADD.W           R0, R7, #0x2100 ; dest
+.text:0006E542                 ADD             R1, PC  ; "TD"
+.text:0006E544                 BL              sub_340A0
+.text:0006E548                 LDR.W           R1, =(aTg - 0x6E554)
+.text:0006E54C                 ADD.W           R0, R4, #0x870 ; dest
+.text:0006E550                 ADD             R1, PC  ; "TG"
+.text:0006E552                 BL              sub_340A0
+.text:0006E556                 LDR.W           R1, =(aTh - 0x6E562)
+.text:0006E55A                 ADD.W           R0, R4, #0x8A0 ; dest
+.text:0006E55E                 ADD             R1, PC  ; "TH"
+.text:0006E560                 BL              sub_340A0
+.text:0006E564                 LDR.W           R1, =(aTj - 0x6E570)
+.text:0006E568                 ADD.W           R0, R4, #0x8D0 ; dest
+.text:0006E56C                 ADD             R1, PC  ; "TJ"
+.text:0006E56E                 BL              sub_340A0
+.text:0006E572                 LDR.W           R1, =(aTm - 0x6E57E)
+.text:0006E576                 ADD.W           R0, R7, #0x21C0 ; dest
+.text:0006E57A                 ADD             R1, PC  ; "TM"
+.text:0006E57C                 BL              sub_340A0
+.text:0006E580                 LDR.W           R1, =(aTn - 0x6E58C)
+.text:0006E584                 ADD.W           R0, R4, #0x930 ; dest
+.text:0006E588                 ADD             R1, PC  ; "TN"
+.text:0006E58A                 BL              sub_340A0
+.text:0006E58E                 LDR.W           R1, =(aTo - 0x6E59A)
+.text:0006E592                 ADD.W           R0, R4, #0x960 ; dest
+.text:0006E596                 ADD             R1, PC  ; "TO"
+.text:0006E598                 BL              sub_340A0
+.text:0006E59C                 LDR.W           R1, =(aTr - 0x6E5A8)
+.text:0006E5A0                 ADD.W           R0, R4, #0x990 ; dest
+.text:0006E5A4                 ADD             R1, PC  ; "TR"
+.text:0006E5A6                 BL              sub_340A0
+.text:0006E5AA                 LDR.W           R1, =(aTt - 0x6E5B6)
+.text:0006E5AE                 ADD.W           R0, R7, #0x2280 ; dest
+.text:0006E5B2                 ADD             R1, PC  ; "TT"
+.text:0006E5B4                 BL              sub_340A0
+.text:0006E5B8                 LDR.W           R1, =(aTv - 0x6E5C4)
+.text:0006E5BC                 ADD.W           R0, R4, #0x9F0 ; dest
+.text:0006E5C0                 ADD             R1, PC  ; "TV"
+.text:0006E5C2                 BL              sub_340A0
+.text:0006E5C6                 LDR.W           R1, =(aTw - 0x6E5D2)
+.text:0006E5CA                 ADD.W           R0, R4, #0xA20 ; dest
+.text:0006E5CE                 ADD             R1, PC  ; "TW"
+.text:0006E5D0                 BL              sub_340A0
+.text:0006E5D4                 LDR.W           R1, =(aTz - 0x6E5E0)
+.text:0006E5D8                 ADD.W           R0, R4, #0xA50 ; dest
+.text:0006E5DC                 ADD             R1, PC  ; "TZ"
+.text:0006E5DE                 BL              sub_340A0
+.text:0006E5E2                 LDR.W           R1, =(aUa - 0x6E5EE)
+.text:0006E5E6                 ADD.W           R0, R7, #0x2340 ; dest
+.text:0006E5EA                 ADD             R1, PC  ; "UA"
+.text:0006E5EC                 BL              sub_340A0
+.text:0006E5F0                 LDR.W           R1, =(aUg - 0x6E5FC)
+.text:0006E5F4                 ADD.W           R0, R4, #0xAB0 ; dest
+.text:0006E5F8                 ADD             R1, PC  ; "UG"
+.text:0006E5FA                 BL              sub_340A0
+.text:0006E5FE                 LDR.W           R1, =(aStatus+4 - 0x6E60A)
+.text:0006E602                 ADD.W           R0, R4, #0xAE0 ; dest
+.text:0006E606                 ADD             R1, PC  ; "US" ; s
+.text:0006E608                 BL              sub_340A0
+.text:0006E60C                 LDR.W           R1, =(aUy - 0x6E618)
+.text:0006E610                 ADD.W           R0, R4, #0xB10 ; dest
+.text:0006E614                 ADD             R1, PC  ; "UY"
+.text:0006E616                 BL              sub_340A0
+.text:0006E61A                 LDR.W           R1, =(aUz - 0x6E626)
+.text:0006E61E                 ADD.W           R0, R7, #0x2400 ; dest
+.text:0006E622                 ADD             R1, PC  ; "UZ"
+.text:0006E624                 BL              sub_340A0
+.text:0006E628                 LDR.W           R1, =(aVa - 0x6E634)
+.text:0006E62C                 ADD.W           R0, R4, #0xB70 ; dest
+.text:0006E630                 ADD             R1, PC  ; "VA"
+.text:0006E632                 BL              sub_340A0
+.text:0006E636                 LDR.W           R1, =(aVc - 0x6E642)
+.text:0006E63A                 ADD.W           R0, R4, #0xBA0 ; dest
+.text:0006E63E                 ADD             R1, PC  ; "VC"
+.text:0006E640                 BL              sub_340A0
+.text:0006E644                 LDR.W           R1, =(aVe - 0x6E650)
+.text:0006E648                 ADD.W           R0, R4, #0xBD0 ; dest
+.text:0006E64C                 ADD             R1, PC  ; "VE"
+.text:0006E64E                 BL              sub_340A0
+.text:0006E652                 LDR.W           R1, =(aVg - 0x6E65E)
+.text:0006E656                 ADD.W           R0, R7, #0x24C0 ; dest
+.text:0006E65A                 ADD             R1, PC  ; "VG"
+.text:0006E65C                 BL              sub_340A0
+.text:0006E660                 LDR             R1, =(aVi - 0x6E66A)
+.text:0006E662                 ADD.W           R0, R4, #0xC30 ; dest
+.text:0006E666                 ADD             R1, PC  ; "VI"
+.text:0006E668                 BL              sub_340A0
+.text:0006E66C                 LDR             R1, =(aVn - 0x6E676)
+.text:0006E66E                 ADD.W           R0, R4, #0xC60 ; dest
+.text:0006E672                 ADD             R1, PC  ; "VN"
+.text:0006E674                 BL              sub_340A0
+.text:0006E678                 LDR             R1, =(aVu - 0x6E682)
+.text:0006E67A                 ADD.W           R0, R4, #0xC90 ; dest
+.text:0006E67E                 ADD             R1, PC  ; "VU"
+.text:0006E680                 BL              sub_340A0
+.text:0006E684                 LDR             R1, =(aWs - 0x6E68E)
+.text:0006E686                 ADD.W           R0, R4, #0xCC0 ; dest
+.text:0006E68A                 ADD             R1, PC  ; "WS"
+.text:0006E68C                 BL              sub_340A0
+.text:0006E690                 LDR             R1, =(aSDChannelSNotF+0x20 - 0x6E69A)
+.text:0006E692                 ADD.W           R0, R4, #0xCF0 ; dest
+.text:0006E696                 ADD             R1, PC  ; "XT" ; s
+.text:0006E698                 BL              sub_340A0
+.text:0006E69C                 LDR             R1, =(aXx - 0x6E6A6)
+.text:0006E69E                 ADD.W           R0, R4, #0xD20 ; dest
+.text:0006E6A2                 ADD             R1, PC  ; "XX"
+.text:0006E6A4                 BL              sub_340A0
+.text:0006E6A8                 LDR             R1, =(aXz - 0x6E6B2)
+.text:0006E6AA                 ADD.W           R0, R4, #0xD50 ; dest
+.text:0006E6AE                 ADD             R1, PC  ; "XZ"
+.text:0006E6B0                 BL              sub_340A0
+.text:0006E6B4                 LDR             R1, =(aYe - 0x6E6BE)
+.text:0006E6B6                 ADD.W           R0, R4, #0xD80 ; dest
+.text:0006E6BA                 ADD             R1, PC  ; "YE"
+.text:0006E6BC                 BL              sub_340A0
+.text:0006E6C0                 LDR             R1, =(aYt - 0x6E6CA)
+.text:0006E6C2                 ADD.W           R0, R4, #0xDB0 ; dest
+.text:0006E6C6                 ADD             R1, PC  ; "YT"
+.text:0006E6C8                 BL              sub_340A0
+.text:0006E6CC                 LDR             R1, =(aZa - 0x6E6D6)
+.text:0006E6CE                 ADD.W           R0, R4, #0xDE0 ; dest
+.text:0006E6D2                 ADD             R1, PC  ; "ZA"
+.text:0006E6D4                 BL              sub_340A0
+.text:0006E6D8                 LDR             R1, =(aZm - 0x6E6E2)
+.text:0006E6DA                 ADD.W           R0, R4, #0xE10 ; dest
+.text:0006E6DE                 ADD             R1, PC  ; "ZM"
+.text:0006E6E0                 BL              sub_340A0
+.text:0006E6E4                 LDR             R1, =(aZw - 0x6E6EE)
+.text:0006E6E6                 ADD.W           R0, R4, #0xE40 ; dest
+.text:0006E6EA                 ADD             R1, PC  ; "ZW"
+.text:0006E6EC                 BL              sub_340A0
+.text:0006E6F0                 MOV             R0, R6
+.text:0006E6F2                 BLX             __cxa_guard_release
+.text:0006E6F6                 LDR             R3, =(_ZNSt5arrayIN11networking_10channelmapELj209EED1Ev_ptr - 0x115B50)
+.text:0006E6F8                 LDR             R2, =(__data_start - 0x6E700)
+.text:0006E6FA                 MOV             R0, R7
+.text:0006E6FC                 ADD             R2, PC  ; __data_start
+.text:0006E6FE                 LDR             R1, [R5,R3] ; std::array<networking_::channelmap,209u>::~array() ...
+.text:0006E700                 BLX             __aeabi_atexit
+.text:0006E704                 B.W             loc_6D93C
+.text:0006E708 ; ---------------------------------------------------------------------------
+.text:0006E708
+.text:0006E708 loc_6E708                               ; CODE XREF: sub_6D8A8+1C4¡üj
+.text:0006E708                 BLX             __stack_chk_fail
+.text:0006E708 ; End of function sub_6D8A8
+
