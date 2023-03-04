@@ -1,0 +1,1151 @@
+int __fastcall sub_8C7A8(int a1, util::SharedPtrDefaultBase *a2, const util::SharedPtrDefaultBase *a3)
+{
+  int v3; // r4
+  const util::SharedPtrDefaultBase *v4; // r9
+  util::SharedPtrDefaultBase *v5; // ST44_4
+  int v6; // r0
+  int v7; // r3
+  _DWORD *v8; // r0
+  _DWORD *v9; // r10
+  util::SharedPtrDefaultBase *v10; // ST28_4
+  int v11; // r10
+  _DWORD *v12; // r0
+  int v13; // r3
+  _DWORD **v14; // r6
+  comm::Proxy *v15; // r0
+  void (__fastcall **v16)(comm::Proxy *); // r2
+  _DWORD *v17; // r0
+  int v18; // r3
+  _DWORD **v19; // r6
+  comm::Proxy *v20; // r0
+  void (__fastcall **v21)(comm::Proxy *); // r2
+  const util::SharedPtrDefaultBase *v22; // r1
+  int v23; // r0
+  int v24; // r0
+  int v25; // r0
+  int v26; // r0
+  int v27; // r0
+  int v28; // r0
+  int v29; // r0
+  _DWORD *v30; // r0
+  int *v31; // r0
+  int *v32; // r0
+  int v33; // r0
+  int v34; // r3
+  int v35; // r3
+  int v36; // r3
+  int v37; // r3
+  int v38; // r3
+  int v39; // r3
+  int v40; // r3
+  int v41; // r3
+  int v42; // r3
+  bool v43; // r2
+  bool v44; // r2
+  int v45; // r0
+  _QWORD *v46; // r10
+  _DWORD *v47; // r0
+  int v48; // r9
+  void *v49; // r11
+  _DWORD *v50; // r9
+  _DWORD *v51; // r0
+  int v52; // r9
+  void *v53; // r10
+  void *v54; // r0
+  _DWORD *v56; // r10
+  _DWORD *v57; // r3
+  int v58; // r11
+  _DWORD *v59; // r3
+  _DWORD *v60; // r0
+  int v61; // r9
+  int v62; // r9
+  int v63; // r9
+  _DWORD *v64; // r0
+  int v65; // r9
+  void *v66; // r10
+  unsigned int v67; // r3
+  bool v68; // cf
+  bool v69; // zf
+  unsigned int v70; // r3
+  bool v71; // cf
+  bool v72; // zf
+  int v73; // r0
+  int *v74; // r3
+  char *v75; // r1
+  int v76; // r0
+  int *v77; // r3
+  char *v78; // r1
+  char *v79; // [sp+0h] [bp-230h]
+  int v80; // [sp+4h] [bp-22Ch]
+  util::SharedPtrDefaultBase *v81; // [sp+24h] [bp-20Ch]
+  util::SharedPtrDefaultBase *v82; // [sp+24h] [bp-20Ch]
+  util::SharedPtrDefaultBase *v83; // [sp+28h] [bp-208h]
+  util::SharedPtrDefaultBase *v84; // [sp+2Ch] [bp-204h]
+  osal::NetDevice *v85; // [sp+34h] [bp-1FCh]
+  tracing::Channel *v86; // [sp+38h] [bp-1F8h]
+  char *s; // [sp+4Ch] [bp-1E4h]
+  int v88; // [sp+50h] [bp-1E0h]
+  char v89; // [sp+E8h] [bp-148h]
+  int v90; // [sp+ECh] [bp-144h]
+  void *v91; // [sp+F4h] [bp-13Ch]
+  _DWORD *v92; // [sp+F8h] [bp-138h]
+  char v93; // [sp+FCh] [bp-134h]
+  char v94; // [sp+FDh] [bp-133h]
+  char v95; // [sp+100h] [bp-130h]
+  void **v96; // [sp+118h] [bp-118h]
+  int v97; // [sp+11Ch] [bp-114h]
+  int v98; // [sp+120h] [bp-110h]
+  int v99; // [sp+124h] [bp-10Ch]
+  void ***v100; // [sp+128h] [bp-108h]
+  int v101; // [sp+140h] [bp-F0h]
+  int *v102; // [sp+150h] [bp-E0h]
+  int v103; // [sp+154h] [bp-DCh]
+  void *v104[4]; // [sp+158h] [bp-D8h]
+  int v105; // [sp+168h] [bp-C8h]
+  int v106; // [sp+16Ch] [bp-C4h]
+  __int16 v107; // [sp+170h] [bp-C0h]
+  void *v108[4]; // [sp+174h] [bp-BCh]
+  int v109; // [sp+184h] [bp-ACh]
+  int v110; // [sp+188h] [bp-A8h]
+  __int16 v111; // [sp+18Ch] [bp-A4h]
+  void *v112[4]; // [sp+190h] [bp-A0h]
+  int v113; // [sp+1A0h] [bp-90h]
+  int v114; // [sp+1A4h] [bp-8Ch]
+  __int16 v115; // [sp+1A8h] [bp-88h]
+  char v116; // [sp+1ACh] [bp-84h]
+  char v117; // [sp+1ADh] [bp-83h]
+  char v118; // [sp+1AEh] [bp-82h]
+  char v119; // [sp+1AFh] [bp-81h]
+  char v120; // [sp+1B0h] [bp-80h]
+  char v121; // [sp+1B1h] [bp-7Fh]
+  char v122; // [sp+1B2h] [bp-7Eh]
+  char v123; // [sp+1B3h] [bp-7Dh]
+  char v124; // [sp+1B4h] [bp-7Ch]
+  char v125; // [sp+1B5h] [bp-7Bh]
+  char v126; // [sp+1B6h] [bp-7Ah]
+  char v127; // [sp+1B7h] [bp-79h]
+  char v128; // [sp+1B8h] [bp-78h]
+  char v129; // [sp+1B9h] [bp-77h]
+  char v130; // [sp+1BAh] [bp-76h]
+  int v131; // [sp+1BCh] [bp-74h]
+  int v132; // [sp+1C0h] [bp-70h]
+  char v133; // [sp+1C4h] [bp-6Ch]
+
+  v3 = a1;
+  v4 = a3;
+  v81 = a2;
+  s = (char *)(a1 + 448);
+  v5 = (util::SharedPtrDefaultBase *)(a1 + 568);
+  sub_EA078();
+  *(_DWORD *)(v3 + 328) = 0;
+  *(_DWORD *)(v3 + 324) = &off_112428;
+  *(_DWORD *)(v3 + 332) = &off_112448;
+  *(_DWORD *)(v3 + 320) = &off_1159E0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_61FFC,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 336),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_61FFC,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 348),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *(_BYTE *)(v3 + 360) = 0;
+  *(_BYTE *)(v3 + 361) = 0;
+  std::UUID::UUID((std::UUID *)&v101, 0x24FD4522u, 0xB997u, 0x4CD5u, 0xB2F8u, 0x89u, 0xDu, 0x6Cu, 0x22u, 0x4Eu, 0xB0u);
+  *(_DWORD *)(v3 + 364) = 0;
+  *(_DWORD *)(v3 + 368) = 0;
+  v6 = operator new(0x3Cu);
+  v7 = v6;
+  *(_DWORD *)v6 = v6;
+  *(_DWORD *)(v7 + 4) = v7;
+  *(_DWORD *)(v7 + 8) = v7;
+  *(_BYTE *)(v6 + 12) = 1;
+  *(_BYTE *)(v6 + 13) = 1;
+  *(_DWORD *)(v3 + 364) = v6;
+  comm::AttributeNotificationContainer::ReplyInterfaceTracker::ReplyInterfaceTracker(
+    (comm::AttributeNotificationContainer::ReplyInterfaceTracker *)(v3 + 372),
+    (comm::AttributeNotificationContainer *)(v3 + 364),
+    (const std::UUID *)&v101);
+  *(_DWORD *)(v3 + 400) = 0;
+  *(_DWORD *)(v3 + 404) = 0;
+  osal::MutexOps::init(v3 + 400, 0, 0, 0);
+  std::UUID::~UUID((std::UUID *)&v101);
+  *(_DWORD *)(v3 + 408) = 0;
+  *(_DWORD *)(v3 + 412) = 0;
+  osal::MutexOps::init(v3 + 408, 0, 0, 0);
+  *(_DWORD *)(v3 + 424) = 0;
+  *(_DWORD *)(v3 + 440) = 0;
+  *(_DWORD *)(v3 + 420) = &off_1125C8;
+  *(_DWORD *)(v3 + 428) = &off_1125E8;
+  *(_DWORD *)(v3 + 468) = 0;
+  *(_DWORD *)(v3 + 436) = &off_1124E0;
+  *(_DWORD *)(v3 + 476) = 0;
+  *(_DWORD *)(v3 + 484) = 0;
+  *(_DWORD *)(v3 + 488) = 0;
+  *(_DWORD *)(v3 + 492) = 0;
+  *(_DWORD *)(v3 + 500) = 0;
+  *(_DWORD *)(v3 + 444) = &off_112500;
+  *(_DWORD *)(v3 + 508) = 0;
+  *(_DWORD *)v3 = &off_112D08;
+  *(_DWORD *)(v3 + 28) = &off_112E84;
+  *(_DWORD *)(v3 + 320) = &off_112F20;
+  *(_DWORD *)(v3 + 416) = &off_112F50;
+  *(_DWORD *)(v3 + 432) = &off_112F6C;
+  *(_DWORD *)(v3 + 448) = &off_112F88;
+  *(_DWORD *)(v3 + 452) = &off_112FB0;
+  *(_DWORD *)(v3 + 456) = &off_112FC4;
+  *(_DWORD *)(v3 + 460) = &off_112FE8;
+  *(_DWORD *)(v3 + 464) = &off_112FFC;
+  *(_DWORD *)(v3 + 472) = &off_113018;
+  *(_DWORD *)(v3 + 480) = &off_11302C;
+  *(_BYTE *)(v3 + 512) = 0;
+  *(_DWORD *)(v3 + 496) = &off_113040;
+  *(_DWORD *)(v3 + 504) = &off_113060;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_67960(v3 + 516, 1, s, &v91, v3 + 504);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *(_BYTE *)(v3 + 528) = 0;
+  v8 = (_DWORD *)operator new(60, &std::nothrow);
+  v9 = v8;
+  *v8 = 0;
+  v10 = (util::SharedPtrDefaultBase *)(v8 + 1);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_483E8,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(v10, (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_621F4,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v9 + 4),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *((_WORD *)v9 + 14) = 0;
+  *((_BYTE *)v9 + 30) = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_483E8,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v9 + 8),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  v9[11] = 0;
+  v9[12] = 0;
+  *((_BYTE *)v9 + 52) = 0;
+  v9[14] = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 532),
+    v9,
+    (void (__cdecl *)(void *, void *))sub_647BC,
+    0);
+  v11 = operator new(32, &std::nothrow);
+  CITypesFactory::createString((CITypesFactory *)v11);
+  CITypesFactory::createString((CITypesFactory *)(v11 + 12));
+  *(_BYTE *)(v11 + 28) = 1;
+  *(_DWORD *)(v11 + 24) = 7;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 544),
+    (void *)v11,
+    (void (__cdecl *)(void *, void *))util::SharedPtr<networking_::Wlan5GApProfile,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  *(_DWORD *)(v3 + 556) = 0;
+  *(_DWORD *)(v3 + 560) = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(v5, v4);
+  *(_DWORD *)(v3 + 596) = 0;
+  *(_DWORD *)(v3 + 600) = 15;
+  *(_DWORD *)(v3 + 624) = 15;
+  *(_BYTE *)(v3 + 580) = 0;
+  *(_DWORD *)(v3 + 620) = 0;
+  *(_BYTE *)(v3 + 604) = 0;
+  sub_340A0((void *)(v3 + 648), "");
+  *(_DWORD *)(v3 + 684) = 0;
+  *(_BYTE *)(v3 + 688) = 0;
+  *(_DWORD *)(v3 + 680) = 6;
+  *(_BYTE *)(v3 + 689) = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 692),
+    (void (__cdecl *)(void *, void *))util::SharedPtr<jobsmng::CJobBase,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  *(_DWORD *)(v3 + 768) = 12;
+  *(_DWORD *)(v3 + 772) = 12;
+  *(_BYTE *)(v3 + 704) = 0;
+  *(_DWORD *)(v3 + 736) = 0;
+  *(_DWORD *)(v3 + 740) = 15;
+  *(_BYTE *)(v3 + 720) = 0;
+  *(_DWORD *)(v3 + 760) = 0;
+  *(_DWORD *)(v3 + 764) = 15;
+  *(_BYTE *)(v3 + 744) = 0;
+  *(_BYTE *)(v3 + 784) = 0;
+  *(_DWORD *)(v3 + 804) = 0;
+  *(_DWORD *)(v3 + 808) = 15;
+  *(_BYTE *)(v3 + 788) = 0;
+  *(_DWORD *)(v3 + 828) = 0;
+  *(_DWORD *)(v3 + 832) = 15;
+  *(_BYTE *)(v3 + 812) = 0;
+  *(_BYTE *)(v3 + 836) = 0;
+  *(_BYTE *)(v3 + 837) = 0;
+  *(_BYTE *)(v3 + 838) = 1;
+  *(_BYTE *)(v3 + 839) = 0;
+  *(_DWORD *)(v3 + 840) = 0;
+  *(_DWORD *)(v3 + 844) = 0;
+  *(_QWORD *)(v3 + 712) = 387530754LL;
+  *(_QWORD *)(v3 + 776) = 0LL;
+  v12 = (_DWORD *)operator new(0x14u);
+  v13 = *(_DWORD *)(v3 + 844);
+  *v12 = v12;
+  v12[1] = v12;
+  *(_DWORD *)(v3 + 840) = v12;
+  if ( v13 )
+  {
+    while ( 1 )
+    {
+      v14 = (_DWORD **)v12[1];
+      v15 = (comm::Proxy *)(v14 + 2);
+      *v14[1] = *v14;
+      (*v14)[1] = v14[1];
+      v16 = (void (__fastcall **)(comm::Proxy *))v14[2];
+      *(_DWORD *)(v3 + 844) = v13 - 1;
+      if ( (char *)*v16 == (char *)asi::connectivity::networking::WlanServiceProxyReply::~WlanServiceProxyReply )
+      {
+        v14[2] = &off_112468;
+        v14[4] = &off_11248C;
+        comm::Proxy::~Proxy(v15);
+        operator delete(v14);
+        v13 = *(_DWORD *)(v3 + 844);
+        if ( !v13 )
+          break;
+      }
+      else
+      {
+        (*v16)(v15);
+        operator delete(v14);
+        v13 = *(_DWORD *)(v3 + 844);
+        if ( !v13 )
+          break;
+      }
+      v12 = *(_DWORD **)(v3 + 840);
+    }
+  }
+  *(_DWORD *)(v3 + 848) = 0;
+  *(_DWORD *)(v3 + 852) = 0;
+  v17 = (_DWORD *)operator new(0x14u);
+  v18 = *(_DWORD *)(v3 + 852);
+  *v17 = v17;
+  v17[1] = v17;
+  *(_DWORD *)(v3 + 848) = v17;
+  if ( v18 )
+  {
+    while ( 1 )
+    {
+      v19 = (_DWORD **)v17[1];
+      v20 = (comm::Proxy *)(v19 + 2);
+      *v19[1] = *v19;
+      (*v19)[1] = v19[1];
+      v21 = (void (__fastcall **)(comm::Proxy *))v19[2];
+      *(_DWORD *)(v3 + 852) = v18 - 1;
+      if ( (char *)*v21 == (char *)asi::wlan::RCC2MMX_WlanProxyReply::~RCC2MMX_WlanProxyReply )
+      {
+        v19[2] = &off_112608;
+        v19[4] = &off_11262C;
+        comm::Proxy::~Proxy(v20);
+        operator delete(v19);
+        v18 = *(_DWORD *)(v3 + 852);
+        if ( !v18 )
+          break;
+      }
+      else
+      {
+        (*v21)(v20);
+        operator delete(v19);
+        v18 = *(_DWORD *)(v3 + 852);
+        if ( !v18 )
+          break;
+      }
+      v17 = *(_DWORD **)(v3 + 848);
+    }
+  }
+  v22 = v81;
+  *(_DWORD *)(v3 + 856) = 0;
+  *(_DWORD *)(v3 + 860) = 0;
+  *(_DWORD *)(v3 + 864) = 0;
+  *(_DWORD *)(v3 + 868) = 0;
+  *(_DWORD *)(v3 + 872) = 0;
+  *(_DWORD *)(v3 + 876) = 0;
+  *(_DWORD *)(v3 + 880) = 0;
+  *(_DWORD *)(v3 + 884) = 0;
+  *(_DWORD *)(v3 + 888) = 0;
+  v88 = v3 + 892;
+  v85 = (osal::NetDevice *)(v3 + 916);
+  v83 = (util::SharedPtrDefaultBase *)(v3 + 904);
+  v82 = (util::SharedPtrDefaultBase *)(v3 + 940);
+  v84 = (util::SharedPtrDefaultBase *)(v3 + 928);
+  v86 = (tracing::Channel *)(v3 + 952);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)(v3 + 892), v22);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 904),
+    (void (__cdecl *)(void *, void *))util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 916),
+    (void (__cdecl *)(void *, void *))util::SharedPtr<networking_::AsyncTaskWlanSignalStrength,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 928),
+    (void (__cdecl *)(void *, void *))sub_3115C,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 940),
+    (void (__cdecl *)(void *, void *))sub_3115C,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 952),
+    (void (__cdecl *)(void *, void *))sub_3115C,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v23 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 964, 600000, 0, v23, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v24 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 1200, 0, 0, v24, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v25 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 1436, 0, 0, v25, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v26 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 1676, 0, 1, v26, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v27 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 1912, 40000, 0, v27, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v28 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 2148, 30000, 0, v28, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  v29 = sub_689AC((util::SharedPtrDefaultBase *)&v91);
+  sub_C5D0C(v3 + 2384, 0, 0, v29, 1);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  CITypesFactory::createString((CITypesFactory *)(v3 + 2620));
+  CITypesFactory::createString((CITypesFactory *)(v3 + 2632));
+  *(_BYTE *)(v3 + 2644) = 0;
+  *(_DWORD *)(v3 + 2672) = 15;
+  *(_BYTE *)(v3 + 2645) = 0;
+  *(_BYTE *)(v3 + 2646) = 0;
+  *(_BYTE *)(v3 + 2647) = 0;
+  *(_BYTE *)(v3 + 2648) = 0;
+  *(_DWORD *)(v3 + 2668) = 0;
+  *(_BYTE *)(v3 + 2652) = 0;
+  sub_340A0((void *)(v3 + 2680), "WLAN_");
+  sub_340A0((void *)(v3 + 2704), "mib2p");
+  sub_3ED58(v3 + 2728, v3 + 2704);
+  *(_DWORD *)(v3 + 2752) = 11;
+  *(_BYTE *)(v3 + 2756) = 0;
+  v30 = (_DWORD *)operator new(12, &std::nothrow);
+  *v30 = 0;
+  v30[1] = 0;
+  v30[2] = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 2760),
+    v30,
+    (void (__cdecl *)(void *, void *))util::SharedPtr<CIPtrArray<networking_::WlanClientProfile>,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 2772),
+    0,
+    (void (__cdecl *)(void *, void *))util::SharedPtr<networking_::WlanClientProfile,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  *(_BYTE *)(v3 + 2801) = 1;
+  *(_DWORD *)(v3 + 2784) = 5;
+  *(_BYTE *)(v3 + 2788) = 0;
+  *(_BYTE *)(v3 + 2789) = 0;
+  *(_BYTE *)(v3 + 2790) = 0;
+  *(_BYTE *)(v3 + 2791) = 0;
+  *(_DWORD *)(v3 + 2792) = 0;
+  *(_DWORD *)(v3 + 2796) = 0;
+  *(_BYTE *)(v3 + 2800) = 0;
+  osal::SecureRandom::SecureRandom((osal::SecureRandom *)(v3 + 2804), 0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_61FFC,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 2872),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_68BC4(v3 + 2888, &v91, v3, networking_::WLAN::newScanResultsSync, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_68BC4(v3 + 2952, &v91, v3, networking_::WLAN::connectToApSyncCb, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_68BC4(v3 + 3016, &v91, v3, networking_::WLAN::disconnectFromApSyncCb, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v89, v4);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    (const util::SharedPtrDefaultBase *)&v89);
+  v31 = (int *)operator new(0x18u);
+  *v31 = (int)&off_112BA0;
+  v31[2] = 0;
+  v31[1] = (int)networking_::WLAN::callFun;
+  v31[4] = v3;
+  v102 = v31;
+  *(_DWORD *)(v3 + 3080) = &off_1120C8;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 3084),
+    (const util::SharedPtrDefaultBase *)&v91);
+  if ( v102 )
+  {
+    if ( v102 == &v101 )
+    {
+      v73 = (*(int (__fastcall **)(int *, int))(v101 + 4))(&v101, v3 + 3096);
+      v74 = v102;
+      *(_DWORD *)(v3 + 3112) = v73;
+      if ( v74 )
+      {
+        v75 = (char *)((char *)&v101 - (char *)v74);
+        if ( &v101 != v74 )
+          v75 = (_BYTE *)(&dword_0 + 1);
+        (*(void (__fastcall **)(int *, char *))(*v74 + 16))(v74, v75);
+        v102 = 0;
+      }
+    }
+    else
+    {
+      *(_DWORD *)(v3 + 3112) = v102;
+      v102 = 0;
+    }
+  }
+  else
+  {
+    *(_DWORD *)(v3 + 3112) = 0;
+  }
+  *(_DWORD *)(v3 + 3120) = 0;
+  *(_DWORD *)(v3 + 3124) = 0;
+  osal::MutexOps::init(v3 + 3120, 0, 0, 0);
+  *(_DWORD *)(v3 + 3128) = 0;
+  *(_DWORD *)(v3 + 3132) = 0;
+  *(_DWORD *)(v3 + 3136) = 0;
+  sub_50CA4(&v101);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *(_DWORD *)(v3 + 3080) = &off_112768;
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v89);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_68D38(v3 + 3144, &v91, v3, networking_::WLAN::newClientSync, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_68D38(v3 + 3208, &v91, v3, networking_::WLAN::removedClientSync, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v89, v4);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    (const util::SharedPtrDefaultBase *)&v89);
+  v32 = (int *)operator new(0x18u);
+  *v32 = (int)&off_112BF0;
+  v32[2] = 0;
+  v32[4] = v3;
+  v32[1] = (int)networking_::WLAN::deauth;
+  v102 = v32;
+  *(_DWORD *)(v3 + 3272) = &off_112798;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 3276),
+    (const util::SharedPtrDefaultBase *)&v91);
+  if ( v102 )
+  {
+    if ( v102 == &v101 )
+    {
+      v76 = (*(int (__fastcall **)(int *, int))(v101 + 4))(&v101, v3 + 3288);
+      v77 = v102;
+      *(_DWORD *)(v3 + 3304) = v76;
+      if ( v77 )
+      {
+        v78 = (char *)((char *)&v101 - (char *)v77);
+        if ( &v101 != v77 )
+          v78 = (_BYTE *)(&dword_0 + 1);
+        (*(void (__fastcall **)(int *, char *))(*v77 + 16))(v77, v78);
+        v102 = 0;
+      }
+    }
+    else
+    {
+      *(_DWORD *)(v3 + 3304) = v102;
+      v102 = 0;
+    }
+  }
+  else
+  {
+    *(_DWORD *)(v3 + 3304) = 0;
+  }
+  *(_DWORD *)(v3 + 3312) = 0;
+  *(_DWORD *)(v3 + 3316) = 0;
+  osal::MutexOps::init(v3 + 3312, 0, 0, 0);
+  *(_DWORD *)(v3 + 3320) = 0;
+  *(_DWORD *)(v3 + 3324) = 0;
+  *(_DWORD *)(v3 + 3328) = 0;
+  sub_72DB4(&v101);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *(_DWORD *)(v3 + 3272) = &off_1127A8;
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v89);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v4);
+  sub_67960(v3 + 3336, 1, s, &v91, 0);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  sub_68A38(
+    v3 + 3352,
+    "/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+    "WLAN",
+    442);
+  *(_DWORD *)(v3 + 3356) = 0;
+  *(_DWORD *)(v3 + 3360) = 0;
+  *(_DWORD *)(v3 + 3364) = 0;
+  *(_DWORD *)(v3 + 3368) = 0;
+  *(_DWORD *)(v3 + 3372) = 0;
+  *(_DWORD *)(v3 + 3376) = 0;
+  *(_DWORD *)(v3 + 3400) = 0;
+  *(_DWORD *)(v3 + 3408) = 0;
+  *(_DWORD *)(v3 + 3412) = &off_1126F8;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 3416),
+    (void (__cdecl *)(void *, void *))util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 3428),
+    (void (__cdecl *)(void *, void *))sub_3115C,
+    0);
+  *(_DWORD *)(v3 + 3440) = 0;
+  *(_DWORD *)(v3 + 3444) = 0;
+  *(_DWORD *)(v3 + 3448) = 0;
+  sub_3F38C(v3 + 3452, 2);
+  *(_DWORD *)(v3 + 3592) = 0;
+  *(_BYTE *)(v3 + 3576) = 0;
+  *(_DWORD *)(v3 + 3596) = 15;
+  sub_340A0((void *)(v3 + 3600), "XT");
+  *(_DWORD *)(v3 + 3636) = 0;
+  *(_DWORD *)(v3 + 3640) = 0;
+  *(_DWORD *)(v3 + 3624) = 1;
+  *(_DWORD *)(v3 + 3628) = 1;
+  *(_BYTE *)(v3 + 3632) = 1;
+  *(_BYTE *)(v3 + 3633) = 1;
+  v33 = operator new(0x58u);
+  v34 = v3 + 3656;
+  *(_DWORD *)v33 = v33;
+  *(_DWORD *)(v33 + 4) = v33;
+  *(_DWORD *)(v33 + 8) = v33;
+  *(_BYTE *)(v33 + 12) = 1;
+  *(_BYTE *)(v33 + 13) = 1;
+  *(_DWORD *)(v3 + 3636) = v33;
+  do
+  {
+    *(_DWORD *)(v34 - 12) = 0;
+    v34 += 12;
+    *(_DWORD *)(v34 - 20) = 0;
+    *(_DWORD *)(v34 - 16) = 0;
+  }
+  while ( v34 != v3 + 3800 );
+  v35 = v3 + 3792;
+  do
+  {
+    *(_BYTE *)(v35 - 4) = 0;
+    v35 += 4;
+    *(_BYTE *)(v35 - 7) = 0;
+    *(_BYTE *)(v35 - 6) = 0;
+    *(_BYTE *)(v35 - 5) = 0;
+  }
+  while ( v35 != v3 + 3840 );
+  *(_DWORD *)(v3 + 3836) = 0;
+  *(_DWORD *)(v3 + 3840) = 0;
+  *(_DWORD *)(v3 + 3844) = 0;
+  *(_DWORD *)(v3 + 3848) = 0;
+  *(_DWORD *)(v3 + 3852) = 0;
+  v36 = operator new(0x2Cu);
+  *(_DWORD *)v36 = v36;
+  *(_BYTE *)(v36 + 12) = 1;
+  *(_BYTE *)(v36 + 13) = 1;
+  *(_DWORD *)(v36 + 4) = v36;
+  *(_DWORD *)(v36 + 8) = v36;
+  *(_DWORD *)(v3 + 3848) = v36;
+  *(_DWORD *)(v3 + 3856) = 0;
+  *(_DWORD *)(v3 + 3860) = 0;
+  v37 = operator new(0x2Cu);
+  *(_DWORD *)v37 = v37;
+  *(_BYTE *)(v37 + 12) = 1;
+  *(_BYTE *)(v37 + 13) = 1;
+  *(_DWORD *)(v37 + 4) = v37;
+  *(_DWORD *)(v37 + 8) = v37;
+  *(_DWORD *)(v3 + 3888) = 15;
+  *(_DWORD *)(v3 + 3856) = v37;
+  *(_BYTE *)(v3 + 3892) = 1;
+  *(_BYTE *)(v3 + 3894) = 1;
+  *(_BYTE *)(v3 + 3898) = 1;
+  *(_BYTE *)(v3 + 3864) = 0;
+  *(_BYTE *)(v3 + 3865) = 0;
+  *(_BYTE *)(v3 + 3866) = 0;
+  *(_BYTE *)(v3 + 3867) = 0;
+  *(_DWORD *)(v3 + 3884) = 0;
+  *(_BYTE *)(v3 + 3868) = 0;
+  *(_BYTE *)(v3 + 3893) = 0;
+  *(_BYTE *)(v3 + 3895) = 0;
+  *(_BYTE *)(v3 + 3896) = 0;
+  *(_BYTE *)(v3 + 3897) = 0;
+  *(_BYTE *)(v3 + 3899) = 0;
+  *(_BYTE *)(v3 + 3900) = 0;
+  *(_DWORD *)(v3 + 3904) = 0;
+  *(_WORD *)(v3 + 3908) = 0;
+  *(_WORD *)(v3 + 3910) = 0;
+  *(_BYTE *)(v3 + 3912) = 0;
+  *(_BYTE *)(v3 + 3913) = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v3 + 3916),
+    (void (__cdecl *)(void *, void *))util::SharedPtr<std::vector<util::SharedPtr<networking_::SWlan5GXmlConfig,util::SharedPtrDefaultBase>,std::allocator<util::SharedPtr<networking_::SWlan5GXmlConfig,util::SharedPtrDefaultBase>>>,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+  snprintf(&v133, 0x3Fu, "%s::%s", "WLAN", "WLAN");
+  readlist((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::operator=(v3 + 3916, &v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  sub_C5DE0(v3 + 964, 600000, 0);
+  sub_51ECC(v84, 0, sub_3115C, 0);
+LABEL_26:
+  v38 = *(_DWORD *)(v3 + 928);
+  while ( !v38 || !*(_DWORD *)(v3 + 932) || !nullsub_12 )
+  {
+    v63 = operator new(16, &std::nothrow);
+    sub_777C8();
+    sub_51ECC(v84, v63, sub_3115C, 0);
+    v38 = *(_DWORD *)(v3 + 928);
+    if ( !v38 || !*(_DWORD *)(v3 + 932) || !nullsub_12 )
+    {
+      std::GlobalErrorHandler::doOutOfMem(
+        (std::GlobalErrorHandler *)"/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+        (const char *)&elf_gnu_hash_indexes[16] + 3,
+        (int)"WLAN",
+        "Could not create AoF for async callbacks",
+        v79);
+      goto LABEL_26;
+    }
+  }
+  sub_51ECC(v82, 0, sub_3115C, 0);
+LABEL_31:
+  v39 = *(_DWORD *)(v3 + 940);
+  while ( !v39 || !*(_DWORD *)(v3 + 944) || !nullsub_12 )
+  {
+    v62 = operator new(16, &std::nothrow);
+    sub_777C8();
+    sub_51ECC(v82, v62, sub_3115C, 0);
+    v39 = *(_DWORD *)(v3 + 940);
+    if ( !v39 || !*(_DWORD *)(v3 + 944) || !nullsub_12 )
+    {
+      std::GlobalErrorHandler::doOutOfMem(
+        (std::GlobalErrorHandler *)"/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+        (const char *)&elf_gnu_hash_indexes[18],
+        (int)"WLAN",
+        "Could not create AoF for async start/stop",
+        v79);
+      goto LABEL_31;
+    }
+  }
+  sub_51ECC(v86, 0, sub_3115C, 0);
+LABEL_36:
+  v40 = *(_DWORD *)(v3 + 952);
+  while ( !v40 || !*(_DWORD *)(v3 + 956) || !nullsub_12 )
+  {
+    v61 = operator new(16, &std::nothrow);
+    sub_777C8();
+    sub_51ECC(v86, v61, sub_3115C, 0);
+    v40 = *(_DWORD *)(v3 + 952);
+    if ( !v40 || !*(_DWORD *)(v3 + 956) || !nullsub_12 )
+    {
+      std::GlobalErrorHandler::doOutOfMem(
+        (std::GlobalErrorHandler *)"/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+        (const char *)&elf_gnu_hash_indexes[19] + 1,
+        (int)"WLAN",
+        "Could not create AoF for async start/stop",
+        v79);
+      goto LABEL_36;
+    }
+  }
+  sub_51ECC(v83, 0, util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::deleteObject, 0);
+LABEL_41:
+  v41 = *(_DWORD *)(v3 + 904);
+  while ( !v41
+       || !*(_DWORD *)(v3 + 908)
+       || !util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::bool_like_thing )
+  {
+    v91 = 0;
+    v92 = 0;
+    v57 = (_DWORD *)operator new(0x34u);
+    *v57 = v57;
+    v57[1] = v57;
+    v57[2] = v57;
+    *((_BYTE *)v57 + 12) = 1;
+    *((_BYTE *)v57 + 13) = 1;
+    v91 = v57;
+    v93 = 1;
+    v94 = 0;
+    v58 = operator new(240, &std::nothrow);
+    sub_DA01C();
+    sub_51ECC(v83, v58, util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::deleteObject, 0);
+    sub_8C5A0(&v91, *((_DWORD *)v91 + 1));
+    v59 = v91;
+    v59[1] = v59;
+    *v59 = v59;
+    v60 = v91;
+    v60[2] = v60;
+    v92 = 0;
+    operator delete(v60);
+    v41 = *(_DWORD *)(v3 + 904);
+    if ( !v41
+      || !*(_DWORD *)(v3 + 908)
+      || !util::SharedPtr<jobsmng::CJobsManager,util::SharedPtrDefaultBase>::bool_like_thing )
+    {
+      std::GlobalErrorHandler::doOutOfMem(
+        (std::GlobalErrorHandler *)"/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+        (const char *)&elf_gnu_hash_indexes[20] + 1,
+        (int)"WLAN",
+        "Could not create jobmng2",
+        v79);
+      goto LABEL_41;
+    }
+  }
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91, v84);
+  util::SharedPtrDefaultBase::operator=(v3 + 3428, &v91);
+  util::SharedPtrDefaultBase::operator=(v3 + 3416, v83);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  sub_51ECC(
+    v85,
+    0,
+    util::SharedPtr<networking_::AsyncTaskWlanSignalStrength,util::SharedPtrDefaultBase>::deleteObject,
+    0);
+LABEL_46:
+  v42 = *(_DWORD *)(v3 + 916);
+  while ( !v42
+       || !*(_DWORD *)(v3 + 920)
+       || !util::SharedPtr<networking_::AsyncTaskWlanSignalStrength,util::SharedPtrDefaultBase>::bool_like_thing )
+  {
+    v56 = (_DWORD *)operator new(496, &std::nothrow);
+    sub_7C790();
+    v56[112] = v3;
+    *v56 = &off_112830;
+    util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)(v56 + 113), v83);
+    util::SharedPtrDefaultBase::SharedPtrDefaultBase((util::SharedPtrDefaultBase *)(v56 + 116), v82);
+    v56[119] = 0;
+    v56[120] = 0;
+    v56[121] = 0;
+    v56[122] = 0;
+    sub_51ECC(
+      v85,
+      v56,
+      util::SharedPtr<networking_::AsyncTaskWlanSignalStrength,util::SharedPtrDefaultBase>::deleteObject,
+      0);
+    v42 = *(_DWORD *)(v3 + 916);
+    if ( !v42
+      || !*(_DWORD *)(v3 + 920)
+      || !util::SharedPtr<networking_::AsyncTaskWlanSignalStrength,util::SharedPtrDefaultBase>::bool_like_thing )
+    {
+      std::GlobalErrorHandler::doOutOfMem(
+        (std::GlobalErrorHandler *)"/home/jenkins/workspace/PM_mib2p_build_prod/connectivity/app_connection_manager/src/WLAN.cxx",
+        (const char *)&elf_gnu_hash_indexes[23],
+        (int)"WLAN",
+        "Could not create Wlan strenght refresh task",
+        v79);
+      goto LABEL_46;
+    }
+  }
+  sub_340A0(&v101, "anp_coding");
+  sub_691CC(&v91, off_11700C, unk_117010, &v89);
+  v97 = v3;
+  v100 = &v96;
+  v96 = &off_111170;
+  sub_46318(v3 + 3636, &v101, &v91, &v96, v3 + 460, 0);
+  if ( v100 )
+    ((void (*)(void))(*v100)[4])();
+  if ( v91 )
+    operator delete(v91);
+  sub_32C50((void **)&v101, 1, 0);
+  *(_BYTE *)(v3 + 3348) = osal::FileSys::exists((osal::FileSys *)"/tmp/brcm_wifi", (const char *)&dword_0 + 1, v43) == 0;
+  v45 = osal::FileSys::exists((osal::FileSys *)"/var/customer_ap5g_vis_tie_rse", (const char *)&dword_0 + 1, v44);
+  if ( v45 < 0 )
+  {
+    if ( word_119F64 <= 3 )
+      tracing::Channel::logCV(
+        (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+        3,
+        "%s(%d): Could not determine AP5G visibility. Using default.",
+        &v133,
+        514);
+  }
+  else
+  {
+    *(_BYTE *)(v3 + 2800) = v45 == 0;
+  }
+  v46 = (_QWORD *)operator new(48, &std::nothrow);
+  *(_BYTE *)v46 = 0;
+  v46[1] = 0LL;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_483E8,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)(v46 + 2),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  *((_DWORD *)v46 + 7) = 0;
+  *((_DWORD *)v46 + 8) = 0;
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    0,
+    (void (__cdecl *)(void *, void *))sub_483E8,
+    0);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)((char *)v46 + 36),
+    (const util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  util::SharedPtrDefaultBase::SharedPtrDefaultBase(
+    (util::SharedPtrDefaultBase *)&v91,
+    v46,
+    (void (__cdecl *)(void *, void *))sub_61FFC,
+    0);
+  util::SharedPtrDefaultBase::operator=(v3 + 2872, &v91);
+  util::SharedPtrDefaultBase::~SharedPtrDefaultBase((util::SharedPtrDefaultBase *)&v91);
+  if ( *(_BYTE *)(v3 + 3348) )
+  {
+    v47 = (_DWORD *)operator new(0x1F8u);
+    v47[1] = 1;
+    v47[2] = 1;
+    v48 = (int)v47;
+    *v47 = &off_112968;
+    v49 = v47 + 4;
+    sub_A81C8(v47 + 4, 1, v3 + 452, 1, v88, v82);
+    v91 = v49;
+    v92 = (_DWORD *)v48;
+    sub_692C0(v3 + 3356, &v91);
+    if ( v92 )
+      sub_3946C();
+    v50 = (_DWORD *)operator new(0x1F8u);
+    v50[1] = 1;
+    v50[2] = 1;
+    *v50 = &off_112968;
+    sub_A81C8(v50 + 4, 0, v3 + 452, 0, v88, v82);
+    v91 = v50 + 4;
+    v92 = v50;
+    sub_692C0(v3 + 3364, &v91);
+    if ( v92 )
+      sub_3946C();
+    v51 = (_DWORD *)operator new(0xF4u);
+    v51[1] = 1;
+    v51[2] = 1;
+    v52 = (int)v51;
+    *v51 = &off_112988;
+    v53 = v51 + 3;
+    sub_ACB9C(v51 + 3, v3 + 456, v88, v83, v82, v84);
+    v91 = v53;
+    v92 = (_DWORD *)v52;
+    sub_692E0(v3 + 3372, &v91);
+    if ( v92 )
+      sub_3946C();
+    sub_825F0(*(_DWORD *)(v3 + 3356) + 16, v3 + 480);
+    sub_825F0(*(_DWORD *)(v3 + 3364) + 16, v3 + 480);
+    sub_825F0(*(_DWORD *)(v3 + 3372) + 12, v3 + 480);
+    if ( (!*(_DWORD *)(v3 + 3372) || !*(_DWORD *)(v3 + 3356) || !*(_DWORD *)(v3 + 3364)) && word_119F64 <= 5 )
+      tracing::Channel::logCV(
+        (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+        5,
+        "%s(%d): couldn't instantiate",
+        &v133,
+        530);
+  }
+  else
+  {
+    v64 = (_DWORD *)operator new(0xF4u);
+    v64[1] = 1;
+    v64[2] = 1;
+    v65 = (int)v64;
+    *v64 = &off_112988;
+    v66 = v64 + 3;
+    sub_ACB9C(v64 + 3, v3 + 456, v88, v83, v82, v84);
+    v91 = v66;
+    v92 = (_DWORD *)v65;
+    sub_692E0(v3 + 3372, &v91);
+    if ( v92 )
+      sub_3946C();
+    if ( !*(_DWORD *)(v3 + 3372) && word_119F64 <= 5 )
+      tracing::Channel::logCV(
+        (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+        5,
+        "%s(%d): couldn't instantiate",
+        &v133,
+        538);
+  }
+  osal::NetDevice::NetDevice((osal::NetDevice *)&v96, 0);
+  if ( v98 && v99 != -1 )
+  {
+    v102 = 0;
+    LOBYTE(v101) = 0;
+    v105 = 0;
+    v107 = 0;
+    v111 = 0;
+    v115 = 0;
+    LOBYTE(v104[0]) = 0;
+    v113 = 0;
+    LOBYTE(v112[0]) = 0;
+    v109 = 0;
+    LOBYTE(v108[0]) = 0;
+    v126 = 0;
+    v127 = 0;
+    v128 = 0;
+    v116 = 0;
+    v117 = 0;
+    v118 = 0;
+    v129 = 0;
+    v130 = 0;
+    v125 = 0;
+    v131 = 0;
+    v119 = 0;
+    v120 = 0;
+    v121 = 0;
+    v122 = 0;
+    v123 = 0;
+    v124 = 0;
+    v103 = 15;
+    v106 = 15;
+    v110 = 15;
+    v114 = 15;
+    v132 = 2;
+LABEL_69:
+    if ( osal::NetDevice::getNextInfo(&v96, &v101) )
+    {
+LABEL_73:
+      sub_32C50(v112, 1, 0);
+      sub_32C50(v108, 1, 0);
+      sub_32C50(v104, 1, 0);
+      sub_32C50((void **)&v101, 1, 0);
+      goto LABEL_74;
+    }
+    while ( 1 )
+    {
+      if ( sub_4BE38(&v101, "uap0") && sub_4BE38(&v101, "bcm1") )
+      {
+        if ( sub_4BE38(&v101, "uap1") && sub_4BE38(&v101, "bcm0") )
+        {
+          if ( !sub_4BE38(&v101, "bcm2") )
+          {
+            sub_83008(&v95, &v101, v3 + 672);
+            sub_32C50((void **)&v95, 1, 0);
+          }
+          goto LABEL_69;
+        }
+        sub_83008(&v95, &v101, v3 + 640);
+        v54 = (void *)(v3 + 604);
+      }
+      else
+      {
+        sub_83008(&v95, &v101, v3 + 632);
+        v54 = (void *)(v3 + 580);
+      }
+      std::string::operator=(v54, &v95);
+      sub_32C50((void **)&v95, 1, 0);
+      if ( osal::NetDevice::getNextInfo(&v96, &v101) )
+        goto LABEL_73;
+    }
+  }
+LABEL_74:
+  if ( *(_DWORD *)(v3 + 596) && *(_DWORD *)(v3 + 620) )
+  {
+    if ( word_119F64 <= 2 )
+    {
+      v67 = *(_DWORD *)(v3 + 624);
+      v68 = v67 >= 0xF;
+      v69 = v67 == 15;
+      if ( v67 > 0xF )
+        v67 = *(_DWORD *)(v3 + 604);
+      if ( v69 || !v68 )
+        v67 = v3 + 604;
+      tracing::Channel::logCV(
+        (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+        2,
+        "%s(%d): 5G AP  MAC: %s",
+        &v133,
+        567,
+        v67);
+      if ( word_119F64 <= 2 )
+      {
+        v70 = *(_DWORD *)(v3 + 600);
+        v71 = v70 >= 0xF;
+        v72 = v70 == 15;
+        if ( v70 > 0xF )
+          v70 = *(_DWORD *)(v3 + 580);
+        if ( v72 || !v71 )
+          v70 = v3 + 580;
+        tracing::Channel::logCV(
+          (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+          2,
+          "%s(%d): 2G AP  MAC: %s",
+          &v133,
+          568,
+          v70);
+        if ( word_119F64 <= 2 )
+          tracing::Channel::logCV(
+            (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+            2,
+            (const char *)&unk_100B1C,
+            &v133,
+            569,
+            v80,
+            *(_QWORD *)(v3 + 672));
+      }
+    }
+    *(_QWORD *)(v3 + 712) ^= *(_QWORD *)(v3 + 632) ^ (*(_QWORD *)(v3 + 640) >> 8);
+  }
+  else if ( word_119F64 <= 5 )
+  {
+    tracing::Channel::logCV(
+      (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+      5,
+      "%s(%d): UNABLE TO RECEIVE WLAN MACs -> WLAN NOT WORKING",
+      &v133,
+      563);
+  }
+  ((void (__fastcall *)(int))loc_7FF1C)(v3);
+  sub_74024(v3);
+  if ( osal::SecureRandom::GetQuality((osal::SecureRandom *)(v3 + 2804)) && word_119F64 <= 3 )
+    tracing::Channel::logCV(
+      (tracing::Channel *)&_tracing__channel_CON_CONMAN_WLAN,
+      3,
+      "%s(%d): Crypto source is unsafe!",
+      &v133,
+      578);
+  sub_340A0(&v101, "dsi_fakeRequest_Set5GMcc");
+  v90 = 0;
+  *(_DWORD *)&v89 = networking_::WLAN::fakeSet5GMcc;
+  sub_7CCD8(&dword_11A050, &v101, v3, networking_::WLAN::fakeSet5GMcc, 0);
+  sub_32C50((void **)&v101, 1, 0);
+  sub_340A0(&v101, "dsi_fakeRequest_Set5GMccNav");
+  v92 = 0;
+  v91 = networking_::WLAN::fakeSet5GMccNav;
+  sub_7CCD8(&dword_11A050, &v101, v3, networking_::WLAN::fakeSet5GMccNav, 0);
+  sub_32C50((void **)&v101, 1, 0);
+  osal::NetDevice::~NetDevice((osal::NetDevice *)&v96);
+  return v3;
+}
